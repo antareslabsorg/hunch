@@ -1,0 +1,61 @@
+{
+ "dataset": "LocalLLaMA/typed-decisions",
+ "revision": "c76749ec58bd",
+ "card_sha256": "b530a260ffbff42b73205f055bd88ee28300304aaf564bc60ea3e5f52035f5e4",
+ "card": {
+  "meraGPT Decider 1": {
+   "kind": "general, zero-shot",
+   "accuracy": 0.768,
+   "kl": 0.096,
+   "brier": 0.052
+  },
+  "TypeSafe Jev 1.13.0": {
+   "kind": "general, zero-shot",
+   "accuracy": 0.727,
+   "kl": 1.442,
+   "brier": 0.148
+  },
+  "ModernBERT-base (149M)": {
+   "kind": "specialist, fitted per workflow",
+   "accuracy": 0.646,
+   "kl": 0.223,
+   "brier": 0.119
+  },
+  "MiniLM-L6 (22M)": {
+   "kind": "specialist, fitted per workflow",
+   "accuracy": 0.587,
+   "kl": 0.262,
+   "brier": 0.143
+  },
+  "Prior (ignores the input)": {
+   "kind": "reference",
+   "accuracy": 0.47,
+   "kl": 0.347,
+   "brier": 0.189
+  },
+  "Majority baseline": {
+   "kind": "ignore the input, always guess the commonest label",
+   "accuracy": 0.52,
+   "kl": null,
+   "brier": null
+  },
+  "Perfect scenario understanding": {
+   "kind": "a model fitted to the latent factors that generated each case, cross-validated",
+   "accuracy": 0.704,
+   "kl": null,
+   "brier": null
+  },
+  "Teacher self-agreement": {
+   "kind": "a fresh teacher sample scored against gold built from the others",
+   "accuracy": 0.735,
+   "kl": null,
+   "brier": null
+  }
+ },
+ "n_decisions": 2000,
+ "prior_from_train": {
+  "accuracy": 0.4675,
+  "kl": 0.3473971111225505,
+  "brier": 0.18870360588649845
+ }
+}

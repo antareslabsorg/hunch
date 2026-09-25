@@ -1,0 +1,294 @@
+{
+ "method": "Compute every derived number the launch documents quote, from the result files, into one file.",
+ "runs": {
+  "w16-06-v3dgp10-1200-s55": {
+   "temperature": {
+    "T": 0.8705505632961241,
+    "dev_smece_T1": 0.023275893219764976,
+    "dev_smece_at_T": 0.00959470969658429
+   },
+   "injection_flip_to_target": {
+    "instruction": 0.356,
+    "neutral_control": 0.028,
+    "noise_same_length": 0.024,
+    "system_markdown": 0.34,
+    "target_pasted": 0.344
+   },
+   "jaggedness_flip_rate": {
+    "case_whitespace": 0.054,
+    "punctuation": 0.016,
+    "sentence_swap": 0.06198347107438017
+   },
+   "laya_vs_reference": {},
+   "typed_decisions": {
+    "accuracy_ci": [
+     0.355,
+     0.405
+    ],
+    "kl_ci": [
+     0.5569177977198205,
+     0.6225882149600614
+    ]
+   },
+   "dev_contamination": {
+    "n": 3416,
+    "n_exact_in_training": 194,
+    "accuracy": 0.8650468384074942,
+    "accuracy_without_exact": 0.8590937306021105
+   },
+   "sealed_contamination": {
+    "n": 3467,
+    "n_exact_in_training": 205,
+    "accuracy": 0.8543409287568503,
+    "accuracy_without_exact": 0.8454935622317596
+   }
+  },
+  "g2-17-v4t": {
+   "temperature": {
+    "T": 0.8705505632961241,
+    "dev_smece_T1": 0.020841305633062898,
+    "dev_smece_at_T": 0.008417092800411714
+   },
+   "injection_flip_to_target": {
+    "instruction": 0.324,
+    "neutral_control": 0.018,
+    "noise_same_length": 0.018,
+    "system_markdown": 0.29,
+    "target_pasted": 0.214
+   },
+   "jaggedness_flip_rate": {
+    "case_whitespace": 0.054,
+    "punctuation": 0.022,
+    "sentence_swap": 0.10743801652892562
+   },
+   "laya_vs_reference": {
+    "reference": "h200-17-fullk-v3d",
+    "suites": 59,
+    "better": 30,
+    "worse": 12,
+    "flat": 17,
+    "median_delta": 0.010000000000000009,
+    "mean_delta": 0.014259009592947881
+   },
+   "typed_decisions": {
+    "accuracy_ci": [
+     0.4845,
+     0.5365
+    ],
+    "kl_ci": [
+     0.32968187320165987,
+     0.37991564530731387
+    ]
+   },
+   "dev_contamination": {
+    "n": 3416,
+    "n_exact_in_training": 194,
+    "accuracy": 0.8785128805620609,
+    "accuracy_without_exact": 0.8718187461204221
+   },
+   "sealed_contamination": {
+    "n": 3467,
+    "n_exact_in_training": 205,
+    "accuracy": 0.8751081626766657,
+    "accuracy_without_exact": 0.8678724708767627
+   }
+  },
+  "decider-2b": {
+   "typed_decisions": {
+    "accuracy_ci": [
+     0.5645,
+     0.6145
+    ],
+    "kl_ci": [
+     0.37998538524775355,
+     0.4432412348466205
+    ]
+   }
+  },
+  "decider-0.8b": {
+   "typed_decisions": {
+    "accuracy_ci": [
+     0.487,
+     0.5345
+    ],
+    "kl_ci": [
+     0.5794617582846803,
+     0.6789024039916476
+    ]
+   }
+  }
+ },
+ "fast_engine": {
+  "w16-06-v3dgp10-1200-s55": {
+   "gate_fp32_exact": true,
+   "gate_bf16_floor": true,
+   "bf16_z": 0.6418177648630854,
+   "bf16_x_floor_tv": 0.8759458008258031,
+   "reference_bf16_p50_ms": 75.56478000003608,
+   "fp32": {
+    "p50_ms": 36.686669999880905,
+    "x_faster_than_reference_bf16": 2.05973395787302,
+    "x_below_jev_round_trip": 10.059937983256253
+   },
+   "bf16": {
+    "p50_ms": 20.970617999978458,
+    "x_faster_than_reference_bf16": 3.6033644788204957,
+    "x_below_jev_round_trip": 17.599177335230117
+   },
+   "mlx_laptop": {
+    "gate_exact": true,
+    "p50_ms": 156.24529152410105,
+    "reference_p50_ms": 950.8259584981715,
+    "x_faster_than_reference": 6.0854695154222,
+    "jev_round_trip_over_hunch": 2.3620911799064404
+   }
+  },
+  "g2-17-v4t": {
+   "gate_fp32_exact": true,
+   "gate_bf16_floor": false,
+   "bf16_z": 0.39153043125808834,
+   "bf16_x_floor_tv": 1.2456407354572148,
+   "reference_bf16_p50_ms": 139.83561800000643,
+   "fp32": {
+    "p50_ms": 66.62185999994108,
+    "x_faster_than_reference_bf16": 2.098944970916905,
+    "x_below_jev_round_trip": 5.539707612656207
+   },
+   "bf16": {
+    "p50_ms": 37.60749800017038,
+    "x_faster_than_reference_bf16": null,
+    "x_below_jev_round_trip": null
+   },
+   "mlx_laptop": {
+    "gate_exact": true,
+    "p50_ms": 400.72881302330643,
+    "reference_p50_ms": 2746.4174999913666,
+    "x_faster_than_reference": 6.853556347173955,
+    "jev_round_trip_over_hunch": 0.9209859960569512
+   }
+  }
+ },
+ "typed_decisions_score_chance": {
+  "decisions": 800,
+  "levels": {
+   "4": 700,
+   "5": 100
+  },
+  "chance_accuracy": 0.24375
+ },
+ "heldout_without_circa": {
+  "g2-17-v4t": {
+   "families": [
+    "heldout.emotion.goemotions",
+    "heldout.legal.casehold"
+   ],
+   "n": 4000,
+   "nll": 0.7518283458956871,
+   "accuracy": 0.701
+  },
+  "g2b-17-v4t-s1": {
+   "families": [
+    "heldout.emotion.goemotions",
+    "heldout.legal.casehold"
+   ],
+   "n": 4000,
+   "nll": 0.7447481332420682,
+   "accuracy": 0.69975
+  },
+  "h200-17-fullk-v3d": {
+   "families": [
+    "heldout.emotion.goemotions",
+    "heldout.legal.casehold"
+   ],
+   "n": 4000,
+   "nll": 0.6875375382351911,
+   "accuracy": 0.72375
+  }
+ },
+ "typed_decisions_paired": {
+  "g2-17-v4t - decider-2b": {
+   "decisions": 2000,
+   "accuracy": {
+    "diff": -0.079,
+    "ci": [
+     -0.1055,
+     -0.053
+    ]
+   },
+   "kl": {
+    "diff": -0.05656698944488047,
+    "ci": [
+     -0.0782016847002635,
+     -0.035147532331283246
+    ]
+   },
+   "brier": {
+    "diff": -0.016301584195579984,
+    "ci": [
+     -0.02822341208095898,
+     -0.004563227537171799
+    ]
+   }
+  },
+  "g2-17-v4t - decider-0.8b": {
+   "decisions": 2000,
+   "accuracy": {
+    "diff": 0.0,
+    "ci": [
+     -0.025,
+     0.02451249999999982
+    ]
+   },
+   "kl": {
+    "diff": -0.27366124297481026,
+    "ci": [
+     -0.30778307320965387,
+     -0.24112277447169692
+    ]
+   },
+   "brier": {
+    "diff": -0.09367447407893845,
+    "ci": [
+     -0.10671282117125454,
+     -0.08109700847140089
+    ]
+   }
+  }
+ },
+ "laya_candidates": {
+  "g1-06-v4t": {
+   "reference": "w16-06-v3dgp10-1200-s55",
+   "suites": 59,
+   "better": 9,
+   "worse": 34,
+   "flat": 16,
+   "median_delta": -0.013333333333333308,
+   "mean_delta": -0.01187092219151034
+  },
+  "g1b-06-v4t-s1": {
+   "reference": "w16-06-v3dgp10-1200-s55",
+   "suites": 59,
+   "better": 27,
+   "worse": 24,
+   "flat": 8,
+   "median_delta": 0.0016666666666667052,
+   "mean_delta": -0.0013989686372565004
+  },
+  "g2b-17-v4t-s1": {
+   "reference": "h200-17-fullk-v3d",
+   "suites": 59,
+   "better": 28,
+   "worse": 17,
+   "flat": 14,
+   "median_delta": 0.0050000000000000044,
+   "mean_delta": 0.01331215751242513
+  }
+ },
+ "contamination_exact_matches": {
+  "heldout": 49,
+  "dev": 573,
+  "calibration": 469,
+  "typed-decisions": 0,
+  "typed-decisions-v2-system-one": 0
+ }
+}

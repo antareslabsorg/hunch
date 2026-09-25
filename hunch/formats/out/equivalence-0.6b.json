@@ -1,0 +1,2368 @@
+{
+ "archive": "docs/results/day6/w16-06-v3dgp10-1200-s55_heldout2000.json",
+ "n": 6000,
+ "bars": {
+  "f16": [
+   0.001,
+   1.0
+  ],
+  "Q8_0": [
+   0.005,
+   1.0
+  ],
+  "8bit": [
+   0.005,
+   1.0
+  ],
+  "Q4_K_M": [
+   0.02,
+   0.995
+  ],
+  "4bit": [
+   0.02,
+   0.995
+  ]
+ },
+ "tolerances": {
+  "smece": 0.005,
+  "nll": 0.005
+ },
+ "manifest": {
+  "hunch-0.6b-preview-mlx-4bit/model.safetensors": {
+   "bytes": 335454107,
+   "dtype": "float16",
+   "file": "hunch-0.6b-preview-mlx-4bit/model.safetensors",
+   "format": "mlx",
+   "level": "4bit",
+   "quantization": {
+    "bits": 4,
+    "group_size": 64,
+    "mode": "affine"
+   },
+   "sha256": "0aa031828c5927a5c24acc861d586f241fca2eacfd4634cc40072fb917b1f514",
+   "source_sha256": "75d678f36ce35cfcb8fc85f96a719bad77638af5b21b3ebabeea83e360ccf2a6"
+  },
+  "hunch-0.6b-preview-mlx-8bit/model.safetensors": {
+   "bytes": 633446639,
+   "dtype": "float16",
+   "file": "hunch-0.6b-preview-mlx-8bit/model.safetensors",
+   "format": "mlx",
+   "level": "8bit",
+   "quantization": {
+    "bits": 8,
+    "group_size": 64,
+    "mode": "affine"
+   },
+   "sha256": "fa83efde68b4333d70898a5b37933191348f05b3851949eb915a04ba321c8f90",
+   "source_sha256": "75d678f36ce35cfcb8fc85f96a719bad77638af5b21b3ebabeea83e360ccf2a6"
+  },
+  "hunch-0.6b-preview-mlx-f16/model.safetensors": {
+   "bytes": 1192141195,
+   "dtype": "float16",
+   "file": "hunch-0.6b-preview-mlx-f16/model.safetensors",
+   "format": "mlx",
+   "level": "f16",
+   "quantization": null,
+   "sha256": "c1cd21e8436ea2b5c25590627dc5f4b607b54b4029038d289e9109d2e238dda7",
+   "source_sha256": "75d678f36ce35cfcb8fc85f96a719bad77638af5b21b3ebabeea83e360ccf2a6"
+  },
+  "hunch-0.6b-preview.Q4_K_M.gguf": {
+   "bytes": 396709344,
+   "file": "hunch-0.6b-preview.Q4_K_M.gguf",
+   "format": "gguf",
+   "level": "Q4_K_M",
+   "sha256": "58743600e9e07d3b29c25ba7e9b080a5e56de09c0aeef53f526f614b474bce10",
+   "source_sha256": "75d678f36ce35cfcb8fc85f96a719bad77638af5b21b3ebabeea83e360ccf2a6"
+  },
+  "hunch-0.6b-preview.Q8_0.gguf": {
+   "bytes": 639451616,
+   "file": "hunch-0.6b-preview.Q8_0.gguf",
+   "format": "gguf",
+   "level": "Q8_0",
+   "sha256": "3c8492ecfdb425e8f16f2c6dc56029251f4fa379dfc98040fe7c4ad62195358a",
+   "source_sha256": "75d678f36ce35cfcb8fc85f96a719bad77638af5b21b3ebabeea83e360ccf2a6"
+  },
+  "hunch-0.6b-preview.f16.gguf": {
+   "bytes": 1198186976,
+   "file": "hunch-0.6b-preview.f16.gguf",
+   "format": "gguf",
+   "level": "f16",
+   "sha256": "45dc23bd2e6565fb309a85b4790da761f9d878455c90297a9e3ebe50e4c9e444",
+   "source_sha256": "75d678f36ce35cfcb8fc85f96a719bad77638af5b21b3ebabeea83e360ccf2a6"
+  }
+ },
+ "noise_floor": {
+  "pytorch-fp32-cpu vs archive": {
+   "n": 6000,
+   "n_nonfinite": 0,
+   "tv_max": 0.07677316758781672,
+   "tv_mean": 0.0033446375165318994,
+   "tv_p99": 0.018641703985631537,
+   "argmax_agree": 0.9953333333333333,
+   "n_argmax_diff": 28,
+   "worst": [
+    {
+     "id": "google-research-datasets/circa:1813:meaning",
+     "tv": 0.07677316758781672,
+     "p_hat": [
+      0.0445,
+      0.4944,
+      0.0434,
+      0.0306,
+      0.2584,
+      0.0341,
+      0.0545,
+      0.04
+     ],
+     "p_ref": [
+      0.0348,
+      0.5711,
+      0.0336,
+      0.0239,
+      0.236,
+      0.0266,
+      0.0426,
+      0.0313
+     ]
+    },
+    {
+     "id": "google-research-datasets/circa:1490:meaning",
+     "tv": 0.07473934814333916,
+     "p_hat": [
+      0.0659,
+      0.1176,
+      0.191,
+      0.0461,
+      0.2869,
+      0.0451,
+      0.1549,
+      0.0925
+     ],
+     "p_ref": [
+      0.0683,
+      0.1002,
+      0.2597,
+      0.047,
+      0.2312,
+      0.0462,
+      0.1533,
+      0.094
+     ]
+    },
+    {
+     "id": "google-research-datasets/circa:417:meaning",
+     "tv": 0.060751451179385185,
+     "p_hat": [
+      0.0607,
+      0.1967,
+      0.2228,
+      0.0342,
+      0.3565,
+      0.0309,
+      0.0588,
+      0.0394
+     ],
+     "p_ref": [
+      0.0576,
+      0.2325,
+      0.1732,
+      0.0325,
+      0.3815,
+      0.0293,
+      0.0559,
+      0.0375
+     ]
+    }
+   ],
+   "argmax_diff_ids": [
+    "google-research-datasets/go_emotions:151:emotion_curiosity",
+    "google-research-datasets/go_emotions:9:emotion_curiosity",
+    "google-research-datasets/go_emotions:85:emotion_confusion",
+    "google-research-datasets/go_emotions:225:emotion_curiosity",
+    "google-research-datasets/go_emotions:30:emotion_curiosity",
+    "google-research-datasets/go_emotions:289:emotion_neutral",
+    "google-research-datasets/go_emotions:5:emotion_curiosity",
+    "google-research-datasets/circa:230:meaning",
+    "google-research-datasets/circa:1249:meaning",
+    "google-research-datasets/circa:1041:meaning"
+   ],
+   "nll@T=1.0": {
+    "nll": 1.0702521799921203,
+    "nll_ref": 1.0700226765711225,
+    "delta": 0.00022950342099781196
+   },
+   "nll@T=0.8706": {
+    "nll": 1.097393897861813,
+    "nll_ref": 1.0970805811737285,
+    "delta": 0.0003133166880844307
+   },
+   "calibration": {
+    "pooled@T=1.0": {
+     "smece": 0.10514542606973476,
+     "smece_ref": 0.10536955209898723,
+     "delta": -0.0002241260292524666
+    },
+    "heldout.emotion.goemotions@T=1.0": {
+     "smece": 0.20655183786335576,
+     "smece_ref": 0.20614579225716195,
+     "delta": 0.00040604560619381114
+    },
+    "heldout.legal.casehold@T=1.0": {
+     "smece": 0.06264454728774865,
+     "smece_ref": 0.06262749026442174,
+     "delta": 1.7057023326910725e-05
+    },
+    "heldout.pragmatics.circa@T=1.0": {
+     "smece": 0.17751067332862325,
+     "smece_ref": 0.177404601397427,
+     "delta": 0.00010607193119624436
+    },
+    "pooled@T=0.8706": {
+     "smece": 0.12987439970441267,
+     "smece_ref": 0.13008927365281947,
+     "delta": -0.00021487394840680185
+    },
+    "heldout.emotion.goemotions@T=0.8706": {
+     "smece": 0.19857030247590168,
+     "smece_ref": 0.19812293273775972,
+     "delta": 0.00044736973814196723
+    },
+    "heldout.legal.casehold@T=0.8706": {
+     "smece": 0.02716492799079929,
+     "smece_ref": 0.027182768230576585,
+     "delta": -1.7840239777296846e-05
+    },
+    "heldout.pragmatics.circa@T=0.8706": {
+     "smece": 0.22214508560348686,
+     "smece_ref": 0.22210257616820955,
+     "delta": 4.2509435277310326e-05
+    }
+   },
+   "max_abs_dsmece": 0.00044736973814196723,
+   "readout_selfcheck_max_abs": 0.0
+  }
+ },
+ "artifacts": {
+  "gguf-Q4_K_M": {
+   "level": "Q4_K_M",
+   "n_scored": 6000,
+   "vs_archive": {
+    "n": 6000,
+    "n_nonfinite": 0,
+    "tv_max": 0.8979740489739925,
+    "tv_mean": 0.056774314644445746,
+    "tv_p99": 0.3427401341823863,
+    "argmax_agree": 0.9133333333333333,
+    "n_argmax_diff": 520,
+    "worst": [
+     {
+      "id": "google-research-datasets/circa:1687:meaning",
+      "tv": 0.8979740489739925,
+      "p_hat": [
+       0.9172,
+       0.0342,
+       0.0109,
+       0.0056,
+       0.007,
+       0.0074,
+       0.0102,
+       0.0074
+      ],
+      "p_ref": [
+       0.0196,
+       0.9185,
+       0.0105,
+       0.0073,
+       0.012,
+       0.0085,
+       0.0136,
+       0.01
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:51:meaning",
+      "tv": 0.8119989889673889,
+      "p_hat": [
+       0.8458,
+       0.1078,
+       0.0087,
+       0.0066,
+       0.0078,
+       0.0072,
+       0.0095,
+       0.0066
+      ],
+      "p_ref": [
+       0.0338,
+       0.8685,
+       0.0168,
+       0.0126,
+       0.0201,
+       0.0139,
+       0.0202,
+       0.0141
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:1154:meaning",
+      "tv": 0.8055547121912241,
+      "p_hat": [
+       0.0734,
+       0.8487,
+       0.0158,
+       0.0085,
+       0.0156,
+       0.009,
+       0.0183,
+       0.0106
+      ],
+      "p_ref": [
+       0.8776,
+       0.0507,
+       0.0159,
+       0.0081,
+       0.011,
+       0.0104,
+       0.0161,
+       0.0102
+      ]
+     }
+    ],
+    "argmax_diff_ids": [
+     "google-research-datasets/go_emotions:355:emotion_neutral",
+     "google-research-datasets/go_emotions:160:emotion_neutral",
+     "google-research-datasets/go_emotions:160:emotion_pride",
+     "google-research-datasets/go_emotions:215:emotion_neutral",
+     "google-research-datasets/go_emotions:174:emotion_fear",
+     "google-research-datasets/go_emotions:216:emotion_pride",
+     "google-research-datasets/go_emotions:260:emotion_disapproval",
+     "google-research-datasets/go_emotions:326:emotion_admiration",
+     "google-research-datasets/go_emotions:326:emotion_pride",
+     "google-research-datasets/go_emotions:104:emotion_curiosity"
+    ],
+    "nll@T=1.0": {
+     "nll": 1.0664405992471686,
+     "nll_ref": 1.0700226765711225,
+     "delta": -0.0035820773239538806
+    },
+    "nll@T=0.8706": {
+     "nll": 1.093272522547648,
+     "nll_ref": 1.0970805811737285,
+     "delta": -0.0038080586260804683
+    },
+    "calibration": {
+     "pooled@T=1.0": {
+      "smece": 0.10926874461625294,
+      "smece_ref": 0.10536955209898723,
+      "delta": 0.003899192517265712
+     },
+     "heldout.emotion.goemotions@T=1.0": {
+      "smece": 0.21697044282257766,
+      "smece_ref": 0.20614579225716195,
+      "delta": 0.010824650565415705
+     },
+     "heldout.legal.casehold@T=1.0": {
+      "smece": 0.06613868772303537,
+      "smece_ref": 0.06262749026442174,
+      "delta": 0.003511197458613627
+     },
+     "heldout.pragmatics.circa@T=1.0": {
+      "smece": 0.17761465777926885,
+      "smece_ref": 0.177404601397427,
+      "delta": 0.00021005638184184994
+     },
+     "pooled@T=0.8706": {
+      "smece": 0.13434825799568464,
+      "smece_ref": 0.13008927365281947,
+      "delta": 0.004258984342865174
+     },
+     "heldout.emotion.goemotions@T=0.8706": {
+      "smece": 0.21013088014721665,
+      "smece_ref": 0.19812293273775972,
+      "delta": 0.012007947409456932
+     },
+     "heldout.legal.casehold@T=0.8706": {
+      "smece": 0.031937931831355,
+      "smece_ref": 0.027182768230576585,
+      "delta": 0.004755163600778416
+     },
+     "heldout.pragmatics.circa@T=0.8706": {
+      "smece": 0.2233000734757896,
+      "smece_ref": 0.22210257616820955,
+      "delta": 0.0011974973075800366
+     }
+    },
+    "max_abs_dsmece": 0.012007947409456932
+   },
+   "verdict_vs_archive": {
+    "tv": false,
+    "argmax": false,
+    "calibration": false,
+    "nll": true,
+    "finite": true,
+    "all_fixed_bars": false
+   },
+   "regroup_tv_max": 0.0,
+   "run": {
+    "settings": {
+     "n_ctx": 16384,
+     "n_ubatch": 512,
+     "n_gpu_layers": 999,
+     "flash_attn": false,
+     "kv_unified": true,
+     "type_k": 1,
+     "type_v": 1,
+     "llama_cpp_python": "0.3.35"
+    },
+    "questions_scored_this_run": 6000,
+    "paths": 30000,
+    "tokens": 5109912,
+    "seconds": 6969.6,
+    "nonfinite": 0
+   },
+   "vs_fp32": {
+    "n": 6000,
+    "n_nonfinite": 0,
+    "tv_max": 0.8937259393278509,
+    "tv_mean": 0.05686546627495651,
+    "tv_p99": 0.34774296689778633,
+    "argmax_agree": 0.913,
+    "n_argmax_diff": 522,
+    "worst": [
+     {
+      "id": "google-research-datasets/circa:1687:meaning",
+      "tv": 0.8937259393278509,
+      "p_hat": [
+       0.9172,
+       0.0342,
+       0.0109,
+       0.0056,
+       0.007,
+       0.0074,
+       0.0102,
+       0.0074
+      ],
+      "p_ref": [
+       0.0235,
+       0.9121,
+       0.011,
+       0.0076,
+       0.0123,
+       0.009,
+       0.0141,
+       0.0104
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:1154:meaning",
+      "tv": 0.813178051263094,
+      "p_hat": [
+       0.0734,
+       0.8487,
+       0.0158,
+       0.0085,
+       0.0156,
+       0.009,
+       0.0183,
+       0.0106
+      ],
+      "p_ref": [
+       0.8857,
+       0.0457,
+       0.0152,
+       0.0077,
+       0.0105,
+       0.01,
+       0.0154,
+       0.0098
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:51:meaning",
+      "tv": 0.8070430206134915,
+      "p_hat": [
+       0.8458,
+       0.1078,
+       0.0087,
+       0.0066,
+       0.0078,
+       0.0072,
+       0.0095,
+       0.0066
+      ],
+      "p_ref": [
+       0.0388,
+       0.8586,
+       0.0177,
+       0.0133,
+       0.0208,
+       0.0148,
+       0.0212,
+       0.0147
+      ]
+     }
+    ],
+    "argmax_diff_ids": [
+     "google-research-datasets/go_emotions:355:emotion_neutral",
+     "google-research-datasets/go_emotions:160:emotion_neutral",
+     "google-research-datasets/go_emotions:160:emotion_pride",
+     "google-research-datasets/go_emotions:215:emotion_neutral",
+     "google-research-datasets/go_emotions:174:emotion_fear",
+     "google-research-datasets/go_emotions:216:emotion_pride",
+     "google-research-datasets/go_emotions:260:emotion_disapproval",
+     "google-research-datasets/go_emotions:326:emotion_admiration",
+     "google-research-datasets/go_emotions:326:emotion_pride",
+     "google-research-datasets/go_emotions:104:emotion_curiosity"
+    ],
+    "nll@T=1.0": {
+     "nll": 1.0664405992471686,
+     "nll_ref": 1.0702521799921203,
+     "delta": -0.0038115807449516925
+    },
+    "nll@T=0.8706": {
+     "nll": 1.093272522547648,
+     "nll_ref": 1.097393897861813,
+     "delta": -0.004121375314164899
+    },
+    "calibration": {
+     "pooled@T=1.0": {
+      "smece": 0.10926874461625294,
+      "smece_ref": 0.10514542606973476,
+      "delta": 0.004123318546518179
+     },
+     "heldout.emotion.goemotions@T=1.0": {
+      "smece": 0.21697044282257766,
+      "smece_ref": 0.20655183786335576,
+      "delta": 0.010418604959221894
+     },
+     "heldout.legal.casehold@T=1.0": {
+      "smece": 0.06613868772303537,
+      "smece_ref": 0.06264454728774865,
+      "delta": 0.003494140435286716
+     },
+     "heldout.pragmatics.circa@T=1.0": {
+      "smece": 0.17761465777926885,
+      "smece_ref": 0.17751067332862325,
+      "delta": 0.00010398445064560558
+     },
+     "pooled@T=0.8706": {
+      "smece": 0.13434825799568464,
+      "smece_ref": 0.12987439970441267,
+      "delta": 0.004473858291271976
+     },
+     "heldout.emotion.goemotions@T=0.8706": {
+      "smece": 0.21013088014721665,
+      "smece_ref": 0.19857030247590168,
+      "delta": 0.011560577671314964
+     },
+     "heldout.legal.casehold@T=0.8706": {
+      "smece": 0.031937931831355,
+      "smece_ref": 0.02716492799079929,
+      "delta": 0.004773003840555713
+     },
+     "heldout.pragmatics.circa@T=0.8706": {
+      "smece": 0.2233000734757896,
+      "smece_ref": 0.22214508560348686,
+      "delta": 0.0011549878723027263
+     }
+    },
+    "max_abs_dsmece": 0.011560577671314964
+   },
+   "verdict_vs_fp32": {
+    "tv": false,
+    "argmax": false,
+    "calibration": false,
+    "nll": true,
+    "finite": true,
+    "all_fixed_bars": false
+   },
+   "gate_vs_floor": {
+    "floor_tv_max": 0.07677316758781672,
+    "floor_rate": 0.004666666666666667,
+    "x_floor_tv": 11.64112368172859,
+    "rate": 0.087,
+    "x_floor_rate": 18.64285714285714,
+    "z": 21.564206592284908,
+    "verdict": "no"
+   },
+   "localisation": {
+    "n_questions": 201,
+    "n_paths": 1005,
+    "hidden_rel_l2_max": 0.24467524886131287,
+    "hidden_rel_l2_mean": 0.0710793286561966,
+    "logit_abs_max": 1.8299684524536133,
+    "logit_abs_mean": 0.16575685143470764,
+    "hidden_rel_l2_mean_vs_prenorm": 0.9433858394622803
+   },
+   "tokenizer_parity": {
+    "segments": 1608,
+    "mismatched": 0,
+    "examples": []
+   }
+  },
+  "gguf-Q8_0": {
+   "level": "Q8_0",
+   "n_scored": 6000,
+   "vs_archive": {
+    "n": 6000,
+    "n_nonfinite": 0,
+    "tv_max": 0.09723382070660591,
+    "tv_mean": 0.00606205385515932,
+    "tv_p99": 0.03878241438884294,
+    "argmax_agree": 0.991,
+    "n_argmax_diff": 54,
+    "worst": [
+     {
+      "id": "google-research-datasets/circa:1132:meaning",
+      "tv": 0.09723382070660591,
+      "p_hat": [
+       0.0879,
+       0.1529,
+       0.1207,
+       0.0795,
+       0.1852,
+       0.0757,
+       0.2232,
+       0.0749
+      ],
+      "p_ref": [
+       0.1029,
+       0.1037,
+       0.1501,
+       0.0828,
+       0.1373,
+       0.082,
+       0.2622,
+       0.0792
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:1568:meaning",
+      "tv": 0.09522254206240177,
+      "p_hat": [
+       0.0706,
+       0.1478,
+       0.1059,
+       0.0527,
+       0.443,
+       0.0478,
+       0.0766,
+       0.0556
+      ],
+      "p_ref": [
+       0.0874,
+       0.1517,
+       0.1442,
+       0.0603,
+       0.3477,
+       0.0556,
+       0.0893,
+       0.0637
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:1452:meaning",
+      "tv": 0.09257381316274405,
+      "p_hat": [
+       0.2834,
+       0.5771,
+       0.0247,
+       0.0169,
+       0.0241,
+       0.0166,
+       0.0349,
+       0.0224
+      ],
+      "p_ref": [
+       0.376,
+       0.4871,
+       0.0243,
+       0.0166,
+       0.0236,
+       0.0164,
+       0.0343,
+       0.0217
+      ]
+     }
+    ],
+    "argmax_diff_ids": [
+     "google-research-datasets/go_emotions:151:emotion_curiosity",
+     "google-research-datasets/go_emotions:9:emotion_curiosity",
+     "google-research-datasets/go_emotions:135:emotion_pride",
+     "google-research-datasets/go_emotions:84:emotion_annoyance",
+     "google-research-datasets/go_emotions:289:emotion_neutral",
+     "google-research-datasets/go_emotions:15:emotion_fear",
+     "google-research-datasets/go_emotions:227:emotion_pride",
+     "google-research-datasets/go_emotions:256:emotion_fear",
+     "google-research-datasets/go_emotions:356:emotion_pride",
+     "google-research-datasets/go_emotions:209:emotion_pride"
+    ],
+    "nll@T=1.0": {
+     "nll": 1.0697712380389373,
+     "nll_ref": 1.0700226765711225,
+     "delta": -0.00025143853218523304
+    },
+    "nll@T=0.8706": {
+     "nll": 1.0968654337398085,
+     "nll_ref": 1.0970805811737285,
+     "delta": -0.00021514743392003766
+    },
+    "calibration": {
+     "pooled@T=1.0": {
+      "smece": 0.10502289581369137,
+      "smece_ref": 0.10536955209898723,
+      "delta": -0.0003466562852958571
+     },
+     "heldout.emotion.goemotions@T=1.0": {
+      "smece": 0.2066128027533608,
+      "smece_ref": 0.20614579225716195,
+      "delta": 0.0004670104961988497
+     },
+     "heldout.legal.casehold@T=1.0": {
+      "smece": 0.06460787465920675,
+      "smece_ref": 0.06262749026442174,
+      "delta": 0.001980384394785012
+     },
+     "heldout.pragmatics.circa@T=1.0": {
+      "smece": 0.1783871119416077,
+      "smece_ref": 0.177404601397427,
+      "delta": 0.0009825105441806925
+     },
+     "pooled@T=0.8706": {
+      "smece": 0.12975724423172758,
+      "smece_ref": 0.13008927365281947,
+      "delta": -0.00033202942109189504
+     },
+     "heldout.emotion.goemotions@T=0.8706": {
+      "smece": 0.19863569049841506,
+      "smece_ref": 0.19812293273775972,
+      "delta": 0.0005127577606553468
+     },
+     "heldout.legal.casehold@T=0.8706": {
+      "smece": 0.02912688712065199,
+      "smece_ref": 0.027182768230576585,
+      "delta": 0.001944118890075404
+     },
+     "heldout.pragmatics.circa@T=0.8706": {
+      "smece": 0.22322649953968918,
+      "smece_ref": 0.22210257616820955,
+      "delta": 0.0011239233714796237
+     }
+    },
+    "max_abs_dsmece": 0.001980384394785012
+   },
+   "verdict_vs_archive": {
+    "tv": false,
+    "argmax": false,
+    "calibration": true,
+    "nll": true,
+    "finite": true,
+    "all_fixed_bars": false
+   },
+   "regroup_tv_max": 0.0,
+   "run": {
+    "settings": {
+     "n_ctx": 16384,
+     "n_ubatch": 512,
+     "n_gpu_layers": 999,
+     "flash_attn": false,
+     "kv_unified": true,
+     "type_k": 1,
+     "type_v": 1,
+     "llama_cpp_python": "0.3.35"
+    },
+    "questions_scored_this_run": 6000,
+    "paths": 30000,
+    "tokens": 5109912,
+    "seconds": 8457.0,
+    "nonfinite": 0
+   },
+   "vs_fp32": {
+    "n": 6000,
+    "n_nonfinite": 0,
+    "tv_max": 0.10771574452519417,
+    "tv_mean": 0.005191142993353424,
+    "tv_p99": 0.03434571017976852,
+    "argmax_agree": 0.9926666666666667,
+    "n_argmax_diff": 44,
+    "worst": [
+     {
+      "id": "google-research-datasets/circa:1490:meaning",
+      "tv": 0.10771574452519417,
+      "p_hat": [
+       0.068,
+       0.0917,
+       0.2964,
+       0.0459,
+       0.2205,
+       0.0452,
+       0.1455,
+       0.0867
+      ],
+      "p_ref": [
+       0.0659,
+       0.1176,
+       0.191,
+       0.0461,
+       0.2869,
+       0.0451,
+       0.1549,
+       0.0925
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:2164:meaning",
+      "tv": 0.09469805844128132,
+      "p_hat": [
+       0.0556,
+       0.0919,
+       0.3907,
+       0.037,
+       0.2875,
+       0.0281,
+       0.0547,
+       0.0544
+      ],
+      "p_ref": [
+       0.0547,
+       0.0854,
+       0.4854,
+       0.0349,
+       0.2091,
+       0.0269,
+       0.0531,
+       0.0505
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:1568:meaning",
+      "tv": 0.08860181272029877,
+      "p_hat": [
+       0.0706,
+       0.1478,
+       0.1059,
+       0.0527,
+       0.443,
+       0.0478,
+       0.0766,
+       0.0556
+      ],
+      "p_ref": [
+       0.0858,
+       0.1484,
+       0.1433,
+       0.0598,
+       0.3544,
+       0.0554,
+       0.0891,
+       0.0639
+      ]
+     }
+    ],
+    "argmax_diff_ids": [
+     "google-research-datasets/go_emotions:85:emotion_confusion",
+     "google-research-datasets/go_emotions:135:emotion_pride",
+     "google-research-datasets/go_emotions:225:emotion_curiosity",
+     "google-research-datasets/go_emotions:84:emotion_annoyance",
+     "google-research-datasets/go_emotions:30:emotion_curiosity",
+     "google-research-datasets/go_emotions:15:emotion_fear",
+     "google-research-datasets/go_emotions:227:emotion_pride",
+     "google-research-datasets/go_emotions:256:emotion_fear",
+     "google-research-datasets/go_emotions:5:emotion_curiosity",
+     "google-research-datasets/go_emotions:356:emotion_pride"
+    ],
+    "nll@T=1.0": {
+     "nll": 1.0697712380389373,
+     "nll_ref": 1.0702521799921203,
+     "delta": -0.000480941953183045
+    },
+    "nll@T=0.8706": {
+     "nll": 1.0968654337398085,
+     "nll_ref": 1.097393897861813,
+     "delta": -0.0005284641220044684
+    },
+    "calibration": {
+     "pooled@T=1.0": {
+      "smece": 0.10502289581369137,
+      "smece_ref": 0.10514542606973476,
+      "delta": -0.00012253025604339052
+     },
+     "heldout.emotion.goemotions@T=1.0": {
+      "smece": 0.2066128027533608,
+      "smece_ref": 0.20655183786335576,
+      "delta": 6.0964890005038574e-05
+     },
+     "heldout.legal.casehold@T=1.0": {
+      "smece": 0.06460787465920675,
+      "smece_ref": 0.06264454728774865,
+      "delta": 0.001963327371458101
+     },
+     "heldout.pragmatics.circa@T=1.0": {
+      "smece": 0.1783871119416077,
+      "smece_ref": 0.17751067332862325,
+      "delta": 0.0008764386129844481
+     },
+     "pooled@T=0.8706": {
+      "smece": 0.12975724423172758,
+      "smece_ref": 0.12987439970441267,
+      "delta": -0.00011715547268509319
+     },
+     "heldout.emotion.goemotions@T=0.8706": {
+      "smece": 0.19863569049841506,
+      "smece_ref": 0.19857030247590168,
+      "delta": 6.53880225133796e-05
+     },
+     "heldout.legal.casehold@T=0.8706": {
+      "smece": 0.02912688712065199,
+      "smece_ref": 0.02716492799079929,
+      "delta": 0.0019619591298527007
+     },
+     "heldout.pragmatics.circa@T=0.8706": {
+      "smece": 0.22322649953968918,
+      "smece_ref": 0.22214508560348686,
+      "delta": 0.0010814139362023134
+     }
+    },
+    "max_abs_dsmece": 0.001963327371458101
+   },
+   "verdict_vs_fp32": {
+    "tv": false,
+    "argmax": false,
+    "calibration": true,
+    "nll": true,
+    "finite": true,
+    "all_fixed_bars": false
+   },
+   "gate_vs_floor": {
+    "floor_tv_max": 0.07677316758781672,
+    "floor_rate": 0.004666666666666667,
+    "x_floor_tv": 1.4030389511020749,
+    "rate": 0.007333333333333333,
+    "x_floor_rate": 1.5714285714285712,
+    "z": 1.8913005212088063,
+    "verdict": "no"
+   },
+   "localisation": {
+    "n_questions": 201,
+    "n_paths": 1005,
+    "hidden_rel_l2_max": 0.020261643454432487,
+    "hidden_rel_l2_mean": 0.007632148917764425,
+    "logit_abs_max": 0.16151916980743408,
+    "logit_abs_mean": 0.016639072448015213,
+    "hidden_rel_l2_mean_vs_prenorm": 0.9422787427902222
+   },
+   "tokenizer_parity": {
+    "segments": 1608,
+    "mismatched": 0,
+    "examples": []
+   }
+  },
+  "gguf-f16": {
+   "level": "f16",
+   "n_scored": 6000,
+   "vs_archive": {
+    "n": 6000,
+    "n_nonfinite": 0,
+    "tv_max": 0.07496827561408281,
+    "tv_mean": 0.0033548598801377617,
+    "tv_p99": 0.01843305265530944,
+    "argmax_agree": 0.9951666666666666,
+    "n_argmax_diff": 29,
+    "worst": [
+     {
+      "id": "google-research-datasets/circa:1813:meaning",
+      "tv": 0.07496827561408281,
+      "p_hat": [
+       0.0446,
+       0.4962,
+       0.0435,
+       0.0307,
+       0.2561,
+       0.0342,
+       0.0546,
+       0.0401
+      ],
+      "p_ref": [
+       0.0348,
+       0.5711,
+       0.0336,
+       0.0239,
+       0.236,
+       0.0266,
+       0.0426,
+       0.0313
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:1490:meaning",
+      "tv": 0.07312812097370625,
+      "p_hat": [
+       0.0659,
+       0.1164,
+       0.1925,
+       0.0461,
+       0.2869,
+       0.0451,
+       0.1545,
+       0.0926
+      ],
+      "p_ref": [
+       0.0683,
+       0.1002,
+       0.2597,
+       0.047,
+       0.2312,
+       0.0462,
+       0.1533,
+       0.094
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:417:meaning",
+      "tv": 0.06123369559645653,
+      "p_hat": [
+       0.0607,
+       0.1965,
+       0.223,
+       0.0343,
+       0.3562,
+       0.0309,
+       0.0589,
+       0.0394
+      ],
+      "p_ref": [
+       0.0576,
+       0.2325,
+       0.1732,
+       0.0325,
+       0.3815,
+       0.0293,
+       0.0559,
+       0.0375
+      ]
+     }
+    ],
+    "argmax_diff_ids": [
+     "google-research-datasets/go_emotions:151:emotion_curiosity",
+     "google-research-datasets/go_emotions:9:emotion_curiosity",
+     "google-research-datasets/go_emotions:85:emotion_confusion",
+     "google-research-datasets/go_emotions:225:emotion_curiosity",
+     "google-research-datasets/go_emotions:30:emotion_curiosity",
+     "google-research-datasets/go_emotions:289:emotion_neutral",
+     "google-research-datasets/go_emotions:5:emotion_curiosity",
+     "google-research-datasets/circa:230:meaning",
+     "google-research-datasets/circa:1249:meaning",
+     "google-research-datasets/circa:1041:meaning"
+    ],
+    "nll@T=1.0": {
+     "nll": 1.0702309236512846,
+     "nll_ref": 1.0700226765711225,
+     "delta": 0.00020824708016209392
+    },
+    "nll@T=0.8706": {
+     "nll": 1.0973699745457006,
+     "nll_ref": 1.0970805811737285,
+     "delta": 0.0002893933719720909
+    },
+    "calibration": {
+     "pooled@T=1.0": {
+      "smece": 0.10496384369482395,
+      "smece_ref": 0.10536955209898723,
+      "delta": -0.0004057084041632769
+     },
+     "heldout.emotion.goemotions@T=1.0": {
+      "smece": 0.20653102976588558,
+      "smece_ref": 0.20614579225716195,
+      "delta": 0.0003852375087236293
+     },
+     "heldout.legal.casehold@T=1.0": {
+      "smece": 0.063150390433829,
+      "smece_ref": 0.06262749026442174,
+      "delta": 0.0005229001694072588
+     },
+     "heldout.pragmatics.circa@T=1.0": {
+      "smece": 0.17752967289350502,
+      "smece_ref": 0.177404601397427,
+      "delta": 0.00012507149607801638
+     },
+     "pooled@T=0.8706": {
+      "smece": 0.12969160535879642,
+      "smece_ref": 0.13008927365281947,
+      "delta": -0.0003976682940230458
+     },
+     "heldout.emotion.goemotions@T=0.8706": {
+      "smece": 0.1985470603850763,
+      "smece_ref": 0.19812293273775972,
+      "delta": 0.0004241276473165856
+     },
+     "heldout.legal.casehold@T=0.8706": {
+      "smece": 0.027670635276328185,
+      "smece_ref": 0.027182768230576585,
+      "delta": 0.0004878670457515999
+     },
+     "heldout.pragmatics.circa@T=0.8706": {
+      "smece": 0.2221657442718059,
+      "smece_ref": 0.22210257616820955,
+      "delta": 6.316810359635605e-05
+     }
+    },
+    "max_abs_dsmece": 0.0005229001694072588
+   },
+   "verdict_vs_archive": {
+    "tv": false,
+    "argmax": false,
+    "calibration": true,
+    "nll": true,
+    "finite": true,
+    "all_fixed_bars": false
+   },
+   "regroup_tv_max": 0.0,
+   "run": {
+    "settings": {
+     "n_ctx": 16384,
+     "n_ubatch": 512,
+     "n_gpu_layers": 999,
+     "flash_attn": false,
+     "kv_unified": true,
+     "type_k": 1,
+     "type_v": 1,
+     "llama_cpp_python": "0.3.35"
+    },
+    "questions_scored_this_run": 6000,
+    "paths": 30000,
+    "tokens": 5109912,
+    "seconds": 4366.5,
+    "nonfinite": 0
+   },
+   "vs_fp32": {
+    "n": 6000,
+    "n_nonfinite": 0,
+    "tv_max": 0.00488022668287158,
+    "tv_mean": 0.00032880729556200095,
+    "tv_p99": 0.0018666662275791178,
+    "argmax_agree": 0.9998333333333334,
+    "n_argmax_diff": 1,
+    "worst": [
+     {
+      "id": "google-research-datasets/circa:1448:meaning",
+      "tv": 0.00488022668287158,
+      "p_hat": [
+       0.2652,
+       0.0225,
+       0.6108,
+       0.0168,
+       0.0222,
+       0.0156,
+       0.0267,
+       0.0202
+      ],
+      "p_ref": [
+       0.27,
+       0.0225,
+       0.6061,
+       0.0168,
+       0.0221,
+       0.0156,
+       0.0267,
+       0.0202
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:1476:meaning",
+      "tv": 0.004326600581407547,
+      "p_hat": [
+       0.0777,
+       0.0762,
+       0.0839,
+       0.5044,
+       0.0613,
+       0.0514,
+       0.0719,
+       0.0731
+      ],
+      "p_ref": [
+       0.0783,
+       0.0768,
+       0.0847,
+       0.5001,
+       0.0618,
+       0.0519,
+       0.0726,
+       0.0738
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:416:meaning",
+      "tv": 0.004207538440823555,
+      "p_hat": [
+       0.3085,
+       0.0507,
+       0.4334,
+       0.0346,
+       0.0435,
+       0.0301,
+       0.0573,
+       0.0421
+      ],
+      "p_ref": [
+       0.3127,
+       0.0502,
+       0.4315,
+       0.0342,
+       0.0431,
+       0.0298,
+       0.0567,
+       0.0417
+      ]
+     }
+    ],
+    "argmax_diff_ids": [
+     "coastalcph/lex_glue:validation:439:holding"
+    ],
+    "nll@T=1.0": {
+     "nll": 1.0702309236512846,
+     "nll_ref": 1.0702521799921203,
+     "delta": -2.1256340835718035e-05
+    },
+    "nll@T=0.8706": {
+     "nll": 1.0973699745457006,
+     "nll_ref": 1.097393897861813,
+     "delta": -2.3923316112339776e-05
+    },
+    "calibration": {
+     "pooled@T=1.0": {
+      "smece": 0.10496384369482395,
+      "smece_ref": 0.10514542606973476,
+      "delta": -0.0001815823749108103
+     },
+     "heldout.emotion.goemotions@T=1.0": {
+      "smece": 0.20653102976588558,
+      "smece_ref": 0.20655183786335576,
+      "delta": -2.0808097470181863e-05
+     },
+     "heldout.legal.casehold@T=1.0": {
+      "smece": 0.063150390433829,
+      "smece_ref": 0.06264454728774865,
+      "delta": 0.0005058431460803481
+     },
+     "heldout.pragmatics.circa@T=1.0": {
+      "smece": 0.17752967289350502,
+      "smece_ref": 0.17751067332862325,
+      "delta": 1.8999564881772013e-05
+     },
+     "pooled@T=0.8706": {
+      "smece": 0.12969160535879642,
+      "smece_ref": 0.12987439970441267,
+      "delta": -0.00018279434561624397
+     },
+     "heldout.emotion.goemotions@T=0.8706": {
+      "smece": 0.1985470603850763,
+      "smece_ref": 0.19857030247590168,
+      "delta": -2.3242090825381645e-05
+     },
+     "heldout.legal.casehold@T=0.8706": {
+      "smece": 0.027670635276328185,
+      "smece_ref": 0.02716492799079929,
+      "delta": 0.0005057072855288967
+     },
+     "heldout.pragmatics.circa@T=0.8706": {
+      "smece": 0.2221657442718059,
+      "smece_ref": 0.22214508560348686,
+      "delta": 2.0658668319045725e-05
+     }
+    },
+    "max_abs_dsmece": 0.0005058431460803481
+   },
+   "verdict_vs_fp32": {
+    "tv": false,
+    "argmax": false,
+    "calibration": true,
+    "nll": true,
+    "finite": true,
+    "all_fixed_bars": false
+   },
+   "gate_vs_floor": {
+    "floor_tv_max": 0.07677316758781672,
+    "floor_rate": 0.004666666666666667,
+    "x_floor_tv": 0.06356682726799504,
+    "rate": 0.00016666666666666666,
+    "x_floor_rate": 0.03571428571428571,
+    "z": -5.01984344403679,
+    "verdict": "pass"
+   },
+   "localisation": {
+    "n_questions": 201,
+    "n_paths": 1005,
+    "hidden_rel_l2_max": 0.0015954342670738697,
+    "hidden_rel_l2_mean": 0.0003427453339099884,
+    "logit_abs_max": 0.009044170379638672,
+    "logit_abs_mean": 0.0008567801560275257,
+    "hidden_rel_l2_mean_vs_prenorm": 0.9423505067825317
+   },
+   "tokenizer_parity": {
+    "segments": 1608,
+    "mismatched": 0,
+    "examples": []
+   }
+  },
+  "mlx-4bit": {
+   "level": "4bit",
+   "n_scored": 6000,
+   "vs_archive": {
+    "n": 6000,
+    "n_nonfinite": 0,
+    "tv_max": 0.8240833398886025,
+    "tv_mean": 0.08562502927545089,
+    "tv_p99": 0.5128286021389067,
+    "argmax_agree": 0.869,
+    "n_argmax_diff": 786,
+    "worst": [
+     {
+      "id": "google-research-datasets/circa:74:meaning",
+      "tv": 0.8240833398886025,
+      "p_hat": [
+       0.7407,
+       0.0595,
+       0.0374,
+       0.0173,
+       0.0286,
+       0.0257,
+       0.0533,
+       0.0374
+      ],
+      "p_ref": [
+       0.0353,
+       0.8836,
+       0.0152,
+       0.0076,
+       0.0127,
+       0.0089,
+       0.0218,
+       0.0149
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:370:meaning",
+      "tv": 0.809654448647052,
+      "p_hat": [
+       0.0157,
+       0.043,
+       0.0174,
+       0.0093,
+       0.0161,
+       0.0112,
+       0.8708,
+       0.0166
+      ],
+      "p_ref": [
+       0.0267,
+       0.7849,
+       0.0263,
+       0.016,
+       0.0397,
+       0.0181,
+       0.0611,
+       0.0271
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:1339:meaning",
+      "tv": 0.7704802812077105,
+      "p_hat": [
+       0.1313,
+       0.6901,
+       0.0365,
+       0.0216,
+       0.0325,
+       0.0222,
+       0.0391,
+       0.0268
+      ],
+      "p_ref": [
+       0.9018,
+       0.0341,
+       0.0133,
+       0.0086,
+       0.0106,
+       0.0093,
+       0.0127,
+       0.0096
+      ]
+     }
+    ],
+    "argmax_diff_ids": [
+     "google-research-datasets/go_emotions:160:emotion_neutral",
+     "google-research-datasets/go_emotions:354:emotion_pride",
+     "google-research-datasets/go_emotions:361:emotion_pride",
+     "google-research-datasets/go_emotions:160:emotion_admiration",
+     "google-research-datasets/go_emotions:215:emotion_neutral",
+     "google-research-datasets/go_emotions:329:emotion_pride",
+     "google-research-datasets/go_emotions:87:emotion_curiosity",
+     "google-research-datasets/go_emotions:210:emotion_pride",
+     "google-research-datasets/go_emotions:216:emotion_admiration",
+     "google-research-datasets/go_emotions:275:emotion_neutral"
+    ],
+    "nll@T=1.0": {
+     "nll": 1.1030128775632295,
+     "nll_ref": 1.0700226765711225,
+     "delta": 0.03299020099210703
+    },
+    "nll@T=0.8706": {
+     "nll": 1.1282459033216279,
+     "nll_ref": 1.0970805811737285,
+     "delta": 0.031165322147899355
+    },
+    "calibration": {
+     "pooled@T=1.0": {
+      "smece": 0.09803482294463073,
+      "smece_ref": 0.10536955209898723,
+      "delta": -0.007334729154356498
+     },
+     "heldout.emotion.goemotions@T=1.0": {
+      "smece": 0.2049375975330162,
+      "smece_ref": 0.20614579225716195,
+      "delta": -0.0012081947241457391
+     },
+     "heldout.legal.casehold@T=1.0": {
+      "smece": 0.08174146927029721,
+      "smece_ref": 0.06262749026442174,
+      "delta": 0.01911397900587547
+     },
+     "heldout.pragmatics.circa@T=1.0": {
+      "smece": 0.17133129593896526,
+      "smece_ref": 0.177404601397427,
+      "delta": -0.006073305458461742
+     },
+     "pooled@T=0.8706": {
+      "smece": 0.12263667697349839,
+      "smece_ref": 0.13008927365281947,
+      "delta": -0.007452596679321077
+     },
+     "heldout.emotion.goemotions@T=0.8706": {
+      "smece": 0.1967561074003366,
+      "smece_ref": 0.19812293273775972,
+      "delta": -0.0013668253374231054
+     },
+     "heldout.legal.casehold@T=0.8706": {
+      "smece": 0.04837855996785495,
+      "smece_ref": 0.027182768230576585,
+      "delta": 0.021195791737278365
+     },
+     "heldout.pragmatics.circa@T=0.8706": {
+      "smece": 0.21852945628869747,
+      "smece_ref": 0.22210257616820955,
+      "delta": -0.0035731198795120878
+     }
+    },
+    "max_abs_dsmece": 0.021195791737278365
+   },
+   "verdict_vs_archive": {
+    "tv": false,
+    "argmax": false,
+    "calibration": false,
+    "nll": false,
+    "finite": true,
+    "all_fixed_bars": false
+   },
+   "regroup_tv_max": 0.0,
+   "run": {
+    "settings": {
+     "dtype": "float16",
+     "activations": "float32",
+     "quantization": {
+      "group_size": 64,
+      "bits": 4,
+      "mode": "affine"
+     },
+     "mlx": "0.32.2"
+    },
+    "questions_scored_this_run": 6000,
+    "paths": 30000,
+    "tokens": 5109912,
+    "seconds": 1556.5,
+    "nonfinite": 0
+   },
+   "vs_fp32": {
+    "n": 6000,
+    "n_nonfinite": 0,
+    "tv_max": 0.8259449573233724,
+    "tv_mean": 0.08590584831564532,
+    "tv_p99": 0.503822074467317,
+    "argmax_agree": 0.8688333333333333,
+    "n_argmax_diff": 787,
+    "worst": [
+     {
+      "id": "google-research-datasets/circa:74:meaning",
+      "tv": 0.8259449573233724,
+      "p_hat": [
+       0.7407,
+       0.0595,
+       0.0374,
+       0.0173,
+       0.0286,
+       0.0257,
+       0.0533,
+       0.0374
+      ],
+      "p_ref": [
+       0.0342,
+       0.8855,
+       0.015,
+       0.0076,
+       0.0126,
+       0.0087,
+       0.0216,
+       0.0148
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:370:meaning",
+      "tv": 0.8143588798120618,
+      "p_hat": [
+       0.0157,
+       0.043,
+       0.0174,
+       0.0093,
+       0.0161,
+       0.0112,
+       0.8708,
+       0.0166
+      ],
+      "p_ref": [
+       0.0258,
+       0.7962,
+       0.0253,
+       0.0154,
+       0.0371,
+       0.0175,
+       0.0564,
+       0.0262
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:1339:meaning",
+      "tv": 0.7754322565160692,
+      "p_hat": [
+       0.1313,
+       0.6901,
+       0.0365,
+       0.0216,
+       0.0325,
+       0.0222,
+       0.0391,
+       0.0268
+      ],
+      "p_ref": [
+       0.9067,
+       0.0306,
+       0.0132,
+       0.0085,
+       0.0103,
+       0.009,
+       0.0124,
+       0.0093
+      ]
+     }
+    ],
+    "argmax_diff_ids": [
+     "google-research-datasets/go_emotions:160:emotion_neutral",
+     "google-research-datasets/go_emotions:354:emotion_pride",
+     "google-research-datasets/go_emotions:361:emotion_pride",
+     "google-research-datasets/go_emotions:160:emotion_admiration",
+     "google-research-datasets/go_emotions:215:emotion_neutral",
+     "google-research-datasets/go_emotions:329:emotion_pride",
+     "google-research-datasets/go_emotions:87:emotion_curiosity",
+     "google-research-datasets/go_emotions:210:emotion_pride",
+     "google-research-datasets/go_emotions:216:emotion_admiration",
+     "google-research-datasets/go_emotions:275:emotion_neutral"
+    ],
+    "nll@T=1.0": {
+     "nll": 1.1030128775632295,
+     "nll_ref": 1.0702521799921203,
+     "delta": 0.03276069757110922
+    },
+    "nll@T=0.8706": {
+     "nll": 1.1282459033216279,
+     "nll_ref": 1.097393897861813,
+     "delta": 0.030852005459814924
+    },
+    "calibration": {
+     "pooled@T=1.0": {
+      "smece": 0.09803482294463073,
+      "smece_ref": 0.10514542606973476,
+      "delta": -0.007110603125104031
+     },
+     "heldout.emotion.goemotions@T=1.0": {
+      "smece": 0.2049375975330162,
+      "smece_ref": 0.20655183786335576,
+      "delta": -0.0016142403303395503
+     },
+     "heldout.legal.casehold@T=1.0": {
+      "smece": 0.08174146927029721,
+      "smece_ref": 0.06264454728774865,
+      "delta": 0.01909692198254856
+     },
+     "heldout.pragmatics.circa@T=1.0": {
+      "smece": 0.17133129593896526,
+      "smece_ref": 0.17751067332862325,
+      "delta": -0.006179377389657986
+     },
+     "pooled@T=0.8706": {
+      "smece": 0.12263667697349839,
+      "smece_ref": 0.12987439970441267,
+      "delta": -0.0072377227309142755
+     },
+     "heldout.emotion.goemotions@T=0.8706": {
+      "smece": 0.1967561074003366,
+      "smece_ref": 0.19857030247590168,
+      "delta": -0.0018141950755650726
+     },
+     "heldout.legal.casehold@T=0.8706": {
+      "smece": 0.04837855996785495,
+      "smece_ref": 0.02716492799079929,
+      "delta": 0.021213631977055662
+     },
+     "heldout.pragmatics.circa@T=0.8706": {
+      "smece": 0.21852945628869747,
+      "smece_ref": 0.22214508560348686,
+      "delta": -0.003615629314789398
+     }
+    },
+    "max_abs_dsmece": 0.021213631977055662
+   },
+   "verdict_vs_fp32": {
+    "tv": false,
+    "argmax": false,
+    "calibration": false,
+    "nll": false,
+    "finite": true,
+    "all_fixed_bars": false
+   },
+   "gate_vs_floor": {
+    "floor_tv_max": 0.07677316758781672,
+    "floor_rate": 0.004666666666666667,
+    "x_floor_tv": 10.758250353271123,
+    "rate": 0.13116666666666665,
+    "x_floor_rate": 28.10714285714285,
+    "z": 27.538203208497656,
+    "verdict": "no"
+   },
+   "localisation": {
+    "n_questions": 201,
+    "n_paths": 1005,
+    "hidden_rel_l2_max": 0.30260637402534485,
+    "hidden_rel_l2_mean": 0.12112868577241898,
+    "logit_abs_max": 2.3104286193847656,
+    "logit_abs_mean": 0.2291979044675827,
+    "hidden_rel_l2_mean_vs_prenorm": 0.9440401792526245
+   }
+  },
+  "mlx-8bit": {
+   "level": "8bit",
+   "n_scored": 6000,
+   "vs_archive": {
+    "n": 6000,
+    "n_nonfinite": 0,
+    "tv_max": 0.15858527272939682,
+    "tv_mean": 0.006340893470866528,
+    "tv_p99": 0.037931961514987275,
+    "argmax_agree": 0.9905,
+    "n_argmax_diff": 57,
+    "worst": [
+     {
+      "id": "coastalcph/lex_glue:validation:1002:holding",
+      "tv": 0.15858527272939682,
+      "p_hat": [
+       0.2701,
+       0.213,
+       0.0683,
+       0.3988,
+       0.0498,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "p_ref": [
+       0.2057,
+       0.1529,
+       0.0478,
+       0.5573,
+       0.0363,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:1490:meaning",
+      "tv": 0.12720774672925472,
+      "p_hat": [
+       0.0624,
+       0.1281,
+       0.1534,
+       0.044,
+       0.3305,
+       0.0433,
+       0.1496,
+       0.0887
+      ],
+      "p_ref": [
+       0.0683,
+       0.1002,
+       0.2597,
+       0.047,
+       0.2312,
+       0.0462,
+       0.1533,
+       0.094
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:1455:meaning",
+      "tv": 0.09490509517490864,
+      "p_hat": [
+       0.0728,
+       0.3927,
+       0.0824,
+       0.0535,
+       0.1299,
+       0.0543,
+       0.1438,
+       0.0706
+      ],
+      "p_ref": [
+       0.0637,
+       0.4876,
+       0.0708,
+       0.0464,
+       0.1111,
+       0.0468,
+       0.112,
+       0.0615
+      ]
+     }
+    ],
+    "argmax_diff_ids": [
+     "google-research-datasets/go_emotions:151:emotion_curiosity",
+     "google-research-datasets/go_emotions:9:emotion_curiosity",
+     "google-research-datasets/go_emotions:85:emotion_confusion",
+     "google-research-datasets/go_emotions:225:emotion_curiosity",
+     "google-research-datasets/go_emotions:257:emotion_curiosity",
+     "google-research-datasets/go_emotions:84:emotion_annoyance",
+     "google-research-datasets/go_emotions:26:emotion_curiosity",
+     "google-research-datasets/go_emotions:289:emotion_neutral",
+     "google-research-datasets/go_emotions:375:emotion_curiosity",
+     "google-research-datasets/go_emotions:307:emotion_embarrassment"
+    ],
+    "nll@T=1.0": {
+     "nll": 1.0714005152718118,
+     "nll_ref": 1.0700226765711225,
+     "delta": 0.0013778387006893045
+    },
+    "nll@T=0.8706": {
+     "nll": 1.0988388585447542,
+     "nll_ref": 1.0970805811737285,
+     "delta": 0.0017582773710256294
+    },
+    "calibration": {
+     "pooled@T=1.0": {
+      "smece": 0.10566846469520907,
+      "smece_ref": 0.10536955209898723,
+      "delta": 0.00029891259622184807
+     },
+     "heldout.emotion.goemotions@T=1.0": {
+      "smece": 0.20569479651758482,
+      "smece_ref": 0.20614579225716195,
+      "delta": -0.00045099573957713135
+     },
+     "heldout.legal.casehold@T=1.0": {
+      "smece": 0.06276077777780223,
+      "smece_ref": 0.06262749026442174,
+      "delta": 0.00013328751338048672
+     },
+     "heldout.pragmatics.circa@T=1.0": {
+      "smece": 0.17838210094190984,
+      "smece_ref": 0.177404601397427,
+      "delta": 0.0009774995444828405
+     },
+     "pooled@T=0.8706": {
+      "smece": 0.13032154732370793,
+      "smece_ref": 0.13008927365281947,
+      "delta": 0.00023227367088846096
+     },
+     "heldout.emotion.goemotions@T=0.8706": {
+      "smece": 0.19761433142792312,
+      "smece_ref": 0.19812293273775972,
+      "delta": -0.0005086013098365982
+     },
+     "heldout.legal.casehold@T=0.8706": {
+      "smece": 0.027319422670195246,
+      "smece_ref": 0.027182768230576585,
+      "delta": 0.00013665443961866086
+     },
+     "heldout.pragmatics.circa@T=0.8706": {
+      "smece": 0.22278323086800633,
+      "smece_ref": 0.22210257616820955,
+      "delta": 0.0006806546997967788
+     }
+    },
+    "max_abs_dsmece": 0.0009774995444828405
+   },
+   "verdict_vs_archive": {
+    "tv": false,
+    "argmax": false,
+    "calibration": true,
+    "nll": true,
+    "finite": true,
+    "all_fixed_bars": false
+   },
+   "regroup_tv_max": 0.0,
+   "run": {
+    "settings": {
+     "dtype": "float16",
+     "activations": "float32",
+     "quantization": {
+      "group_size": 64,
+      "bits": 8,
+      "mode": "affine"
+     },
+     "mlx": "0.32.2"
+    },
+    "questions_scored_this_run": 6000,
+    "paths": 30000,
+    "tokens": 5109912,
+    "seconds": 1413.8,
+    "nonfinite": 0
+   },
+   "vs_fp32": {
+    "n": 6000,
+    "n_nonfinite": 0,
+    "tv_max": 0.12864382378757,
+    "tv_mean": 0.005518102803553727,
+    "tv_p99": 0.03270388770848517,
+    "argmax_agree": 0.9918333333333333,
+    "n_argmax_diff": 49,
+    "worst": [
+     {
+      "id": "coastalcph/lex_glue:validation:1002:holding",
+      "tv": 0.12864382378757,
+      "p_hat": [
+       0.2701,
+       0.213,
+       0.0683,
+       0.3988,
+       0.0498,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "p_ref": [
+       0.2213,
+       0.163,
+       0.0507,
+       0.5274,
+       0.0377,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:1879:meaning",
+      "tv": 0.11877261498011649,
+      "p_hat": [
+       0.2451,
+       0.6655,
+       0.0165,
+       0.0079,
+       0.0136,
+       0.0145,
+       0.0227,
+       0.0142
+      ],
+      "p_ref": [
+       0.3639,
+       0.5491,
+       0.016,
+       0.0077,
+       0.0132,
+       0.0141,
+       0.022,
+       0.0139
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:1585:meaning",
+      "tv": 0.09507549740374088,
+      "p_hat": [
+       0.7438,
+       0.1802,
+       0.0148,
+       0.0098,
+       0.014,
+       0.0115,
+       0.0151,
+       0.0109
+      ],
+      "p_ref": [
+       0.6488,
+       0.2625,
+       0.0171,
+       0.0112,
+       0.0171,
+       0.0132,
+       0.0175,
+       0.0127
+      ]
+     }
+    ],
+    "argmax_diff_ids": [
+     "google-research-datasets/go_emotions:257:emotion_curiosity",
+     "google-research-datasets/go_emotions:84:emotion_annoyance",
+     "google-research-datasets/go_emotions:30:emotion_curiosity",
+     "google-research-datasets/go_emotions:26:emotion_curiosity",
+     "google-research-datasets/go_emotions:375:emotion_curiosity",
+     "google-research-datasets/go_emotions:307:emotion_embarrassment",
+     "google-research-datasets/go_emotions:209:emotion_pride",
+     "google-research-datasets/circa:27:meaning",
+     "google-research-datasets/circa:1442:meaning",
+     "google-research-datasets/circa:536:meaning"
+    ],
+    "nll@T=1.0": {
+     "nll": 1.0714005152718118,
+     "nll_ref": 1.0702521799921203,
+     "delta": 0.0011483352796914925
+    },
+    "nll@T=0.8706": {
+     "nll": 1.0988388585447542,
+     "nll_ref": 1.097393897861813,
+     "delta": 0.0014449606829411987
+    },
+    "calibration": {
+     "pooled@T=1.0": {
+      "smece": 0.10566846469520907,
+      "smece_ref": 0.10514542606973476,
+      "delta": 0.0005230386254743147
+     },
+     "heldout.emotion.goemotions@T=1.0": {
+      "smece": 0.20569479651758482,
+      "smece_ref": 0.20655183786335576,
+      "delta": -0.0008570413457709425
+     },
+     "heldout.legal.casehold@T=1.0": {
+      "smece": 0.06276077777780223,
+      "smece_ref": 0.06264454728774865,
+      "delta": 0.000116230490053576
+     },
+     "heldout.pragmatics.circa@T=1.0": {
+      "smece": 0.17838210094190984,
+      "smece_ref": 0.17751067332862325,
+      "delta": 0.0008714276132865961
+     },
+     "pooled@T=0.8706": {
+      "smece": 0.13032154732370793,
+      "smece_ref": 0.12987439970441267,
+      "delta": 0.0004471476192952628
+     },
+     "heldout.emotion.goemotions@T=0.8706": {
+      "smece": 0.19761433142792312,
+      "smece_ref": 0.19857030247590168,
+      "delta": -0.0009559710479785655
+     },
+     "heldout.legal.casehold@T=0.8706": {
+      "smece": 0.027319422670195246,
+      "smece_ref": 0.02716492799079929,
+      "delta": 0.0001544946793959577
+     },
+     "heldout.pragmatics.circa@T=0.8706": {
+      "smece": 0.22278323086800633,
+      "smece_ref": 0.22214508560348686,
+      "delta": 0.0006381452645194685
+     }
+    },
+    "max_abs_dsmece": 0.0009559710479785655
+   },
+   "verdict_vs_fp32": {
+    "tv": false,
+    "argmax": false,
+    "calibration": true,
+    "nll": true,
+    "finite": true,
+    "all_fixed_bars": false
+   },
+   "gate_vs_floor": {
+    "floor_tv_max": 0.07677316758781672,
+    "floor_rate": 0.004666666666666667,
+    "x_floor_tv": 1.6756352229497529,
+    "rate": 0.008166666666666666,
+    "x_floor_rate": 1.7499999999999998,
+    "z": 2.400887349018043,
+    "verdict": "no"
+   },
+   "localisation": {
+    "n_questions": 201,
+    "n_paths": 1005,
+    "hidden_rel_l2_max": 0.026952756568789482,
+    "hidden_rel_l2_mean": 0.007369114551693201,
+    "logit_abs_max": 0.23355627059936523,
+    "logit_abs_mean": 0.01428238209336996,
+    "hidden_rel_l2_mean_vs_prenorm": 0.9423405528068542
+   }
+  },
+  "mlx-f16": {
+   "level": "f16",
+   "n_scored": 6000,
+   "vs_archive": {
+    "n": 6000,
+    "n_nonfinite": 0,
+    "tv_max": 0.07774524949491024,
+    "tv_mean": 0.003359267497624387,
+    "tv_p99": 0.019163846829906208,
+    "argmax_agree": 0.9953333333333333,
+    "n_argmax_diff": 28,
+    "worst": [
+     {
+      "id": "google-research-datasets/circa:1490:meaning",
+      "tv": 0.07774524949491024,
+      "p_hat": [
+       0.0657,
+       0.1183,
+       0.1886,
+       0.046,
+       0.2896,
+       0.045,
+       0.1545,
+       0.0922
+      ],
+      "p_ref": [
+       0.0683,
+       0.1002,
+       0.2597,
+       0.047,
+       0.2312,
+       0.0462,
+       0.1533,
+       0.094
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:1813:meaning",
+      "tv": 0.07706889137625694,
+      "p_hat": [
+       0.0446,
+       0.4941,
+       0.0435,
+       0.0307,
+       0.2585,
+       0.0341,
+       0.0546,
+       0.0401
+      ],
+      "p_ref": [
+       0.0348,
+       0.5711,
+       0.0336,
+       0.0239,
+       0.236,
+       0.0266,
+       0.0426,
+       0.0313
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:417:meaning",
+      "tv": 0.06157142389565706,
+      "p_hat": [
+       0.0607,
+       0.1962,
+       0.2236,
+       0.0342,
+       0.3562,
+       0.0309,
+       0.0588,
+       0.0394
+      ],
+      "p_ref": [
+       0.0576,
+       0.2325,
+       0.1732,
+       0.0325,
+       0.3815,
+       0.0293,
+       0.0559,
+       0.0375
+      ]
+     }
+    ],
+    "argmax_diff_ids": [
+     "google-research-datasets/go_emotions:151:emotion_curiosity",
+     "google-research-datasets/go_emotions:9:emotion_curiosity",
+     "google-research-datasets/go_emotions:85:emotion_confusion",
+     "google-research-datasets/go_emotions:225:emotion_curiosity",
+     "google-research-datasets/go_emotions:30:emotion_curiosity",
+     "google-research-datasets/go_emotions:289:emotion_neutral",
+     "google-research-datasets/go_emotions:5:emotion_curiosity",
+     "google-research-datasets/circa:230:meaning",
+     "google-research-datasets/circa:1249:meaning",
+     "google-research-datasets/circa:1041:meaning"
+    ],
+    "nll@T=1.0": {
+     "nll": 1.070267000864156,
+     "nll_ref": 1.0700226765711225,
+     "delta": 0.0002443242930334488
+    },
+    "nll@T=0.8706": {
+     "nll": 1.0974110290285628,
+     "nll_ref": 1.0970805811737285,
+     "delta": 0.0003304478548342704
+    },
+    "calibration": {
+     "pooled@T=1.0": {
+      "smece": 0.1051769203891638,
+      "smece_ref": 0.10536955209898723,
+      "delta": -0.00019263170982342093
+     },
+     "heldout.emotion.goemotions@T=1.0": {
+      "smece": 0.20663421124277387,
+      "smece_ref": 0.20614579225716195,
+      "delta": 0.0004884189856119159
+     },
+     "heldout.legal.casehold@T=1.0": {
+      "smece": 0.062621836559438,
+      "smece_ref": 0.06262749026442174,
+      "delta": -5.653704983746288e-06
+     },
+     "heldout.pragmatics.circa@T=1.0": {
+      "smece": 0.17753829655754155,
+      "smece_ref": 0.177404601397427,
+      "delta": 0.00013369516011454974
+     },
+     "pooled@T=0.8706": {
+      "smece": 0.12990704034686767,
+      "smece_ref": 0.13008927365281947,
+      "delta": -0.00018223330595179554
+     },
+     "heldout.emotion.goemotions@T=0.8706": {
+      "smece": 0.1986594230628586,
+      "smece_ref": 0.19812293273775972,
+      "delta": 0.0005364903250988928
+     },
+     "heldout.legal.casehold@T=0.8706": {
+      "smece": 0.027141516738809886,
+      "smece_ref": 0.027182768230576585,
+      "delta": -4.125149176669937e-05
+     },
+     "heldout.pragmatics.circa@T=0.8706": {
+      "smece": 0.22216702904052446,
+      "smece_ref": 0.22210257616820955,
+      "delta": 6.445287231490737e-05
+     }
+    },
+    "max_abs_dsmece": 0.0005364903250988928
+   },
+   "verdict_vs_archive": {
+    "tv": false,
+    "argmax": false,
+    "calibration": true,
+    "nll": true,
+    "finite": true,
+    "all_fixed_bars": false
+   },
+   "regroup_tv_max": 0.0,
+   "run": {
+    "settings": {
+     "dtype": "float16",
+     "activations": "float32",
+     "quantization": null,
+     "mlx": "0.32.2"
+    },
+    "questions_scored_this_run": 6000,
+    "paths": 30000,
+    "tokens": 5109912,
+    "seconds": 887.5,
+    "nonfinite": 0
+   },
+   "vs_fp32": {
+    "n": 6000,
+    "n_nonfinite": 0,
+    "tv_max": 0.005691474303603172,
+    "tv_mean": 0.0002782075148813116,
+    "tv_p99": 0.0017099115299060975,
+    "argmax_agree": 1.0,
+    "n_argmax_diff": 0,
+    "worst": [
+     {
+      "id": "google-research-datasets/circa:975:meaning",
+      "tv": 0.005691474303603172,
+      "p_hat": [
+       0.088,
+       0.506,
+       0.0675,
+       0.0484,
+       0.0668,
+       0.0416,
+       0.113,
+       0.0686
+      ],
+      "p_ref": [
+       0.0894,
+       0.5003,
+       0.0682,
+       0.0489,
+       0.0674,
+       0.042,
+       0.1145,
+       0.0693
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:645:meaning",
+      "tv": 0.004710848443210125,
+      "p_hat": [
+       0.5941,
+       0.1819,
+       0.0421,
+       0.0228,
+       0.0333,
+       0.0335,
+       0.0518,
+       0.0405
+      ],
+      "p_ref": [
+       0.5988,
+       0.1783,
+       0.0419,
+       0.0227,
+       0.0331,
+       0.0333,
+       0.0516,
+       0.0403
+      ]
+     },
+     {
+      "id": "google-research-datasets/circa:727:meaning",
+      "tv": 0.004331262316554785,
+      "p_hat": [
+       0.6331,
+       0.2703,
+       0.0188,
+       0.0122,
+       0.017,
+       0.0127,
+       0.0206,
+       0.0153
+      ],
+      "p_ref": [
+       0.6374,
+       0.2661,
+       0.0188,
+       0.0122,
+       0.017,
+       0.0126,
+       0.0206,
+       0.0153
+      ]
+     }
+    ],
+    "argmax_diff_ids": [],
+    "nll@T=1.0": {
+     "nll": 1.070267000864156,
+     "nll_ref": 1.0702521799921203,
+     "delta": 1.4820872035636867e-05
+    },
+    "nll@T=0.8706": {
+     "nll": 1.0974110290285628,
+     "nll_ref": 1.097393897861813,
+     "delta": 1.713116674983972e-05
+    },
+    "calibration": {
+     "pooled@T=1.0": {
+      "smece": 0.1051769203891638,
+      "smece_ref": 0.10514542606973476,
+      "delta": 3.149431942904568e-05
+     },
+     "heldout.emotion.goemotions@T=1.0": {
+      "smece": 0.20663421124277387,
+      "smece_ref": 0.20655183786335576,
+      "delta": 8.237337941810474e-05
+     },
+     "heldout.legal.casehold@T=1.0": {
+      "smece": 0.062621836559438,
+      "smece_ref": 0.06264454728774865,
+      "delta": -2.2710728310657013e-05
+     },
+     "heldout.pragmatics.circa@T=1.0": {
+      "smece": 0.17753829655754155,
+      "smece_ref": 0.17751067332862325,
+      "delta": 2.7623228918305376e-05
+     },
+     "pooled@T=0.8706": {
+      "smece": 0.12990704034686767,
+      "smece_ref": 0.12987439970441267,
+      "delta": 3.264064245500631e-05
+     },
+     "heldout.emotion.goemotions@T=0.8706": {
+      "smece": 0.1986594230628586,
+      "smece_ref": 0.19857030247590168,
+      "delta": 8.91205869569256e-05
+     },
+     "heldout.legal.casehold@T=0.8706": {
+      "smece": 0.027141516738809886,
+      "smece_ref": 0.02716492799079929,
+      "delta": -2.3411251989402526e-05
+     },
+     "heldout.pragmatics.circa@T=0.8706": {
+      "smece": 0.22216702904052446,
+      "smece_ref": 0.22214508560348686,
+      "delta": 2.1943437037597047e-05
+     }
+    },
+    "max_abs_dsmece": 8.91205869569256e-05
+   },
+   "verdict_vs_fp32": {
+    "tv": false,
+    "argmax": true,
+    "calibration": true,
+    "nll": true,
+    "finite": true,
+    "all_fixed_bars": false
+   },
+   "gate_vs_floor": {
+    "floor_tv_max": 0.07677316758781672,
+    "floor_rate": 0.004666666666666667,
+    "x_floor_tv": 0.07413363916622301,
+    "rate": 0.0,
+    "x_floor_rate": 0.0,
+    "z": -5.297686866389274,
+    "verdict": "pass"
+   },
+   "localisation": {
+    "n_questions": 201,
+    "n_paths": 1005,
+    "hidden_rel_l2_max": 0.001239059492945671,
+    "hidden_rel_l2_mean": 0.000370429566828534,
+    "logit_abs_max": 0.009625136852264404,
+    "logit_abs_mean": 0.0009183182846754789,
+    "hidden_rel_l2_mean_vs_prenorm": 0.9423529505729675
+   }
+  }
+ },
+ "archive_calibration": {
+  "pooled@T=1.0": 0.10536955209898723,
+  "heldout.emotion.goemotions@T=1.0": 0.20614579225716195,
+  "heldout.legal.casehold@T=1.0": 0.06262749026442174,
+  "heldout.pragmatics.circa@T=1.0": 0.177404601397427,
+  "pooled@T=0.8706": 0.13008927365281947,
+  "heldout.emotion.goemotions@T=0.8706": 0.19812293273775972,
+  "heldout.legal.casehold@T=0.8706": 0.027182768230576585,
+  "heldout.pragmatics.circa@T=0.8706": 0.22210257616820955
+ },
+ "anchor": "pytorch-fp32-cpu",
+ "design_a": {
+  "n_questions": 201,
+  "tv_max": 0.11159682087600231,
+  "tv_mean": 0.02568949104648139,
+  "argmax_agree": 0.9950248756218906
+ },
+ "backend_agreement": {}
+}

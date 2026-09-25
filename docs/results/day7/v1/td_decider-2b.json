@@ -1,0 +1,39 @@
+{
+ "dataset": "LocalLLaMA/typed-decisions",
+ "revision": "c76749ec58bd",
+ "split": "all/test",
+ "n_cases": 400,
+ "n_decisions": 2000,
+ "missing": 0,
+ "overall": {
+  "n": 2000,
+  "accuracy": 0.5895,
+  "kl": 0.41093858027251456,
+  "brier": 0.21149746832925756
+ },
+ "by_type": {
+  "choice": {
+   "n": 600,
+   "accuracy": 0.56,
+   "kl": 0.5143311157235178,
+   "brier": 0.23324504012584937
+  },
+  "noul": {
+   "n": 600,
+   "accuracy": 0.6533333333333333,
+   "kl": 0.3686485580153512,
+   "brier": 0.24348621754058664
+  },
+  "score": {
+   "n": 800,
+   "accuracy": 0.56375,
+   "kl": 0.3651116953771347,
+   "brier": 0.17119522757331687
+  }
+ },
+ "latency_ms_p50_per_decision": 14.199614524841309,
+ "seconds": 295.04956817626953,
+ "model": "Mapika/decider-2b",
+ "model_revision": "9839cc9d908be16c5988c0d041034b5fdf82c7a2",
+ "kind": "general, zero-shot (open Decider, own interface, shipped temperature)"
+}

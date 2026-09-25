@@ -1,0 +1,24 @@
+{
+ "checkpoint": "w16-06-v3dgp10-1200-s55",
+ "model": "Qwen/Qwen3-0.6B",
+ "requests_timed": 380,
+ "warmup": 20,
+ "ms_per_request": {
+  "p50": 75.56478000003608,
+  "p90": 105.01464720009608
+ },
+ "ms_per_decision": {
+  "p50": 15.112956000007216,
+  "p90": 21.002929440019216
+ },
+ "conditions": {
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "amp": "bf16",
+  "torch": "2.11.0+cu128",
+  "engine": "reference (hunch/infer.py)",
+  "token_budget": 16384,
+  "python": "3.12.3",
+  "batch": "one request at a time",
+  "suite": "LocalLLaMA/typed-decisions test @c76749ec58bd"
+ }
+}

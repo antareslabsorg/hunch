@@ -1,0 +1,13 @@
+# what REPRODUCE writes on your machine
+/.venv/
+/.cache/
+/data/
+/runs/
+/results/
+/hunch/formats/out/*.gguf
+/hunch/formats/out/hunch-*-mlx-*/
+/hunch/formats/out/preds*/
+/hunch/formats/out/manifest.json
+/hunch/formats/out/imatrix/
+__pycache__/
+*.pyc

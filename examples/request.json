@@ -1,0 +1,56 @@
+{
+  "states": [
+    {
+      "id": "ticket-4412",
+      "state": {
+        "ticket": {
+          "subject": "Refund for order 4412",
+          "body": "I was charged twice for the same order and I want my money back today.",
+          "days_since_purchase": 12,
+          "customer_tier": "gold"
+        },
+        "policy": "Refunds within 30 days of purchase. Duplicate charges are refunded immediately without review."
+      },
+      "questions": [
+        {
+          "id": "route",
+          "type": "choice",
+          "instruction": "Apply `policy` to `ticket`. Which handling path does the policy require?",
+          "candidates": [
+            {"id": "approve", "label": "Approve refund", "description": "The policy allows an immediate refund."},
+            {"id": "review", "label": "Manual review", "description": "The case is an exception that needs a person."},
+            {"id": "reject", "label": "Reject", "description": "The policy does not allow a refund."}
+          ]
+        },
+        {
+          "id": "angry",
+          "type": "boolean",
+          "instruction": "Is the customer expressing anger or frustration in `ticket.body`?"
+        },
+        {
+          "id": "urgency",
+          "type": "score",
+          "instruction": "How urgent is this ticket for the support team?",
+          "levels": ["Can wait a week.", "Should be handled within two days.", "Should be handled today.", "Needs immediate action."]
+        }
+      ]
+    },
+    {
+      "id": "msg-77",
+      "state": {"message": "I still haven't received my new card, it's been two weeks"},
+      "questions": [
+        {
+          "id": "intent",
+          "type": "choice",
+          "instruction": "A customer of an online bank sent the message in `message`. Which single intent best describes what the customer wants?",
+          "candidates": [
+            {"id": "card_arrival", "label": "card arrival", "description": "The user asks when or whether a new card will arrive."},
+            {"id": "lost_or_stolen_card", "label": "lost or stolen card", "description": "The user reports a card as lost or stolen."},
+            {"id": "card_not_working", "label": "card not working", "description": "The user reports a card that fails at payment."},
+            {"id": "activate_my_card", "label": "activate my card", "description": "The user wants to activate a received card."}
+          ]
+        }
+      ]
+    }
+  ]
+}

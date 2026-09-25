@@ -1,0 +1,27 @@
+[project]
+name = "antareslabs-hunch"   # the import is `hunch`; the PyPI package named hunch is unrelated
+version = "0.0.1"
+description = "Hunch: an open-weight decision scorer. State, questions and candidates in; a probability for every candidate out, from one batched forward pass"
+requires-python = ">=3.12"
+license = { text = "Apache-2.0" }
+dependencies = [
+  "torch>=2.6",
+  "transformers>=4.56",   # hunch/model.py passes dtype= to from_pretrained
+  "huggingface_hub>=0.34",   # the README's `hf download`
+  "datasets>=3.0",
+  "safetensors",
+  "numpy",
+  "pyarrow",
+  "tqdm",
+]
+
+[project.optional-dependencies]
+train = ["bitsandbytes", "accelerate"]
+dev = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["hunch*"]

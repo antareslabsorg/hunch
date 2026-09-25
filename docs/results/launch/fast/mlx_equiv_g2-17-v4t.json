@@ -1,0 +1,37 @@
+{
+ "artifact": "hunch-1.7b-preview-mlx-f16",
+ "settings": {
+  "dtype": "float16",
+  "activations": "float32",
+  "quantization": null,
+  "mlx": "0.32.2"
+ },
+ "engine": "shared-prefix (hunch/fast.py)",
+ "path_tokens": 1457131,
+ "seconds": 1681.9,
+ "vs_mlx_reference": {
+  "n": 6000,
+  "answers_changed": 0,
+  "tv_max": 1.2010096038333334e-05,
+  "tv_mean": 8.075351060424729e-07
+ },
+ "gate_exact": {
+  "rule": "no answer changed and largest TV below 1e-4",
+  "verdict": "pass"
+ },
+ "vs_fp32": {
+  "n": 6000,
+  "answers_changed": 0,
+  "tv_max": 0.003130179064839471,
+  "tv_mean": 0.00022688074363422028
+ },
+ "fp32_floor_gate": {
+  "floor_tv_max": 0.03083014627918601,
+  "floor_rate": 0.004666666666666667,
+  "x_floor_tv": 0.10152981554137845,
+  "rate": 0.0,
+  "x_floor_rate": 0.0,
+  "z": -5.297686866389274,
+  "verdict": "pass"
+ }
+}

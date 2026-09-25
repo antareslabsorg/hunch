@@ -1,0 +1,26 @@
+{
+ "checkpoint": "g2-17-v4t",
+ "model": "Qwen/Qwen3-1.7B",
+ "ref_amp": "fp32",
+ "fast_amp": "fp32",
+ "gpu": "NVIDIA GeForce RTX 5090",
+ "torch": "2.11.0+cu128",
+ "heldout": {
+  "n": 6000,
+  "answers_changed": 0,
+  "tv_max": 6.111119834718154e-06,
+  "tv_mean": 6.801576903031415e-07,
+  "families": {
+   "heldout.pragmatics.circa": 2000,
+   "heldout.legal.casehold": 2000,
+   "heldout.emotion.goemotions": 2000
+  }
+ },
+ "typed_decisions": {
+  "n": 2000,
+  "answers_changed": 0,
+  "tv_max": 7.661826015165074e-06,
+  "tv_mean": 5.206714980421385e-07
+ },
+ "seconds": 725.3
+}

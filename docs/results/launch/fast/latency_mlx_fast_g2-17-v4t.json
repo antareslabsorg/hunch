@@ -1,0 +1,26 @@
+{
+ "checkpoint": "hunch-1.7b-preview-mlx-f16",
+ "model": "Qwen/Qwen3-1.7B",
+ "requests_timed": 380,
+ "warmup": 20,
+ "ms_per_request": {
+  "p50": 400.72881302330643,
+  "p90": 459.10232530441135
+ },
+ "ms_per_decision": {
+  "p50": 80.14576260466129,
+  "p90": 91.82046506088227
+ },
+ "conditions": {
+  "device": "Apple M4 Pro",
+  "runtime": "MLX 0.32.2",
+  "weights": "f16",
+  "activations": "float32",
+  "load_average_1min_at_start": 3.81,
+  "engine": "shared-prefix (hunch/fast.py)",
+  "token_budget": 16384,
+  "python": "3.13.9",
+  "batch": "one request at a time",
+  "suite": "LocalLLaMA/typed-decisions test @c76749ec58bd"
+ }
+}

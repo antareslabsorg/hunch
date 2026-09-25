@@ -1,0 +1,6 @@
+# On-device formats only. torch / transformers / safetensors / numpy come from the repo environment
+# (`pip install -e .`, see pyproject.toml); nothing else is added.
+llama-cpp-python==0.3.35
+gguf==0.19.0
+mlx==0.32.2
+mlx-lm==0.31.3

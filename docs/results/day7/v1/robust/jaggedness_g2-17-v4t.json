@@ -1,0 +1,8625 @@
+{
+ "checkpoint": "<scratch>/runs/g2-17-v4t/best",
+ "model": "Qwen/Qwen3-1.7B",
+ "temperature": 1.0,
+ "amp": "bf16",
+ "n": 500,
+ "seed": 0,
+ "heldout_sha256_12": "d2f3cd035050",
+ "families": [
+  "heldout.emotion.goemotions",
+  "heldout.legal.casehold",
+  "heldout.pragmatics.circa"
+ ],
+ "seconds": 84.5,
+ "probe": "jaggedness",
+ "floor_tv": 0.0168,
+ "floor_rate": 0.00593,
+ "sentence_swap_skipped": 258,
+ "instruction_swap": "not run: held-out families have no instruction bank under docs/research/sources",
+ "table": {
+  "heldout.emotion.goemotions": {
+   "case_whitespace": {
+    "n": 167,
+    "flip_rate": 0.023952095808383235,
+    "tv_mean": 0.018324435354798874,
+    "tv_p90": 0.05589734441831281,
+    "tv_max": 0.23730725049972534,
+    "flip_rate_x_floor": 4.039139259423817,
+    "tv_max_x_floor": 14.125431577364605
+   },
+   "punctuation": {
+    "n": 167,
+    "flip_rate": 0.011976047904191617,
+    "tv_mean": 0.010286068518407096,
+    "tv_p90": 0.03140081046051817,
+    "tv_max": 0.07893195214522797,
+    "flip_rate_x_floor": 2.0195696297119086,
+    "tv_max_x_floor": 4.698330484834998
+   },
+   "sentence_swap": {
+    "n": 75,
+    "flip_rate": 0.13333333333333333,
+    "tv_mean": 0.07373305238339915,
+    "tv_p90": 0.18954393964875516,
+    "tv_max": 0.34882094555025966,
+    "flip_rate_x_floor": 22.484541877459247,
+    "tv_max_x_floor": 20.76315152084879
+   }
+  },
+  "all": {
+   "case_whitespace": {
+    "n": 500,
+    "flip_rate": 0.054,
+    "tv_mean": 0.03281388115328595,
+    "tv_p90": 0.07006207754775375,
+    "tv_max": 0.400100036435995,
+    "flip_rate_x_floor": 9.106239460370995,
+    "tv_max_x_floor": 23.815478359285418
+   },
+   "punctuation": {
+    "n": 500,
+    "flip_rate": 0.022,
+    "tv_mean": 0.012984310724048148,
+    "tv_p90": 0.0314330287975697,
+    "tv_max": 0.09124147882874499,
+    "flip_rate_x_floor": 3.7099494097807755,
+    "tv_max_x_floor": 5.431040406472916
+   },
+   "sentence_swap": {
+    "n": 242,
+    "flip_rate": 0.10743801652892562,
+    "tv_mean": 0.0475583993860127,
+    "tv_p90": 0.11007245181298386,
+    "tv_max": 0.34882094555025966,
+    "flip_rate_x_floor": 18.1177093640684,
+    "tv_max_x_floor": 20.76315152084879
+   }
+  },
+  "heldout.legal.casehold": {
+   "case_whitespace": {
+    "n": 167,
+    "flip_rate": 0.07784431137724551,
+    "tv_mean": 0.041396914206726684,
+    "tv_p90": 0.08114634303546168,
+    "tv_max": 0.19633664500845066,
+    "flip_rate_x_floor": 13.127202593127404,
+    "tv_max_x_floor": 11.686705060026826
+   },
+   "punctuation": {
+    "n": 167,
+    "flip_rate": 0.03592814371257485,
+    "tv_mean": 0.017048614291826688,
+    "tv_p90": 0.037468722163800955,
+    "tv_max": 0.09124147882874499,
+    "flip_rate_x_floor": 6.058708889135724,
+    "tv_max_x_floor": 5.431040406472916
+   },
+   "sentence_swap": {
+    "n": 167,
+    "flip_rate": 0.09580838323353294,
+    "tv_mean": 0.03580331570455172,
+    "tv_p90": 0.08186799809158185,
+    "tv_max": 0.1619018050453069,
+    "flip_rate_x_floor": 16.15655703769527,
+    "tv_max_x_floor": 9.637012205077793
+   }
+  },
+  "heldout.pragmatics.circa": {
+   "case_whitespace": {
+    "n": 166,
+    "flip_rate": 0.060240963855421686,
+    "tv_mean": 0.038755874698001236,
+    "tv_p90": 0.08421586258616126,
+    "tv_max": 0.400100036435995,
+    "flip_rate_x_floor": 10.158678559093033,
+    "tv_max_x_floor": 23.815478359285418
+   },
+   "punctuation": {
+    "n": 166,
+    "flip_rate": 0.018072289156626505,
+    "tv_mean": 0.011610020076596582,
+    "tv_p90": 0.023458278077788445,
+    "tv_max": 0.05843342372646989,
+    "flip_rate_x_floor": 3.0476035677279096,
+    "tv_max_x_floor": 3.478179983718446
+   }
+  }
+ },
+ "per_question_max_tv": {
+  "heldout.emotion.goemotions": {
+   "median": 0.0178524696940214,
+   "p90": 0.12171256478509072,
+   "max": 0.34882094555025966,
+   "share_above_floor_tv": 0.5269461077844312
+  },
+  "all": {
+   "median": 0.03376424670488906,
+   "p90": 0.09824496082258419,
+   "max": 0.400100036435995,
+   "share_above_floor_tv": 0.712
+  },
+  "heldout.legal.casehold": {
+   "median": 0.04365701735930612,
+   "p90": 0.09890660782631602,
+   "max": 0.19633664500845066,
+   "share_above_floor_tv": 0.9520958083832335
+  },
+  "heldout.pragmatics.circa": {
+   "median": 0.028420072339026096,
+   "p90": 0.08421586258616126,
+   "max": 0.400100036435995,
+   "share_above_floor_tv": 0.6566265060240963
+  }
+ },
+ "rows": [
+  {
+   "id": "google-research-datasets/go_emotions:7:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0010251337561605796
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.00029344282135138414
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.0019969683464194843
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:91:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.035683883873585245
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.007692264990287835
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.030932976381679148
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:105:emotion_approval",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.009004159554354157
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:213:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.006369842950536546
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.011017189558313552
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.030582071672361585
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:250:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.022407169550182515
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0017183906328772647
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.04027899577146643
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:262:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0169931991530734
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0032911826422094767
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:403:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.007410307122670691
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.006663514113463588
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.0034338699631993597
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:408:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.007814414315531613
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.000294352812513117
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.00559980380584537
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:448:emotion_approval",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.019736892277336646
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.01159978550314221
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.06465591570431803
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:478:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.00016130480255495752
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0002484515369027603
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:521:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.020515091159957838
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0014718139648835019
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.015533791032676054
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:522:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.01681712672808977
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.032720851671264276
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.011919928489174433
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:535:emotion_neutral",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.021054566533999702
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.003732162100672315
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:585:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0027213095807638865
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.007035575665356619
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.12153299543395246
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:593:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0020940973894792107
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.00043994936469984175
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:596:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.06722009081810576
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.010681032975300653
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:607:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0004445372245077822
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:617:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.07526424213393645
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.041399505072305706
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.19972920247844628
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:644:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.00353887129353124
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.015108385196100232
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:657:emotion_approval",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.002783000427737825
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.008925626215701477
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.04182609274980409
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:712:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0016439928138618914
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.01957041054323927
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.027173434452746115
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:755:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.01436992773890923
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0009169578552246094
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:766:emotion_neutral",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.017777896594600467
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.006167352199554443
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.07458559668061213
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:816:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0001287602667571254
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 9.900179630847189e-05
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:853:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0006369908551025899
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.002072370050648323
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:912:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.004146933555603027
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0009145736694335938
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:915:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.026568365939672087
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.007709002603302248
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.04511667209921001
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:933:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.02408143574482391
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:961:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.026646339326831706
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:978:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.006822176011202125
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0028290710739535957
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1202:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.0699322003856
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.039613407015639424
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.0810335428325919
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1221:emotion_neutral",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0027457687623104465
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.011217296123504639
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1238:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.009877365140914973
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.04309646418571478
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.34882094555025966
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1245:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0049172462895487115
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.002377509844210042
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1249:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0004992198790881985
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.001911586024994855
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1329:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.005486966245053182
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.014352143612228474
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.14263326779802254
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1337:emotion_neutral",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.027692176514944933
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.01947092951920837
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1408:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.007891205301042703
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.018989927862489674
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.013800474330254886
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1429:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.05367724287016051
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.03862673044204712
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1443:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.00016820429753039434
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0049545149675171984
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.05356941529786319
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1452:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.05338629110724491
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.014659228069719588
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1542:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0025893639886002216
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0006273084914834217
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.015303219503220186
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1563:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0003274407631710663
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0005612969670327761
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1587:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.00014219643502633508
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0003506934855574996
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1593:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.00017315148791219315
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.002642535875090987
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.07450493545318547
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1598:emotion_sadness",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0654712551962576
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0012212567641030347
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.09775211146609888
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1642:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.002629845114087804
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0023463427396608026
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1697:emotion_anger",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0055571989332997285
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.002896686467670051
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1704:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.011686339040874356
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0034799962596909415
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.006918296945266116
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1707:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.02806346526438352
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0011874543792837061
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.0069143023965748465
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1776:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.012990004727524242
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.010054767056891567
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1804:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.009269829274711643
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.001542907819558001
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.006269090630136698
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1806:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.002920868808709079
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0006779570420281447
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1847:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.07705702965233942
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.006001532077789307
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1885:emotion_remorse",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.06594381373032722
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.012944600980456356
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.23436190229477427
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1902:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.002184268246420356
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 1.542301418789964e-05
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1907:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.005056303429466974
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.000502084349786474
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1974:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.02830928205934327
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.003168719043727175
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:1986:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.007897099931647444
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.012746253621407674
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.09367473237852784
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2031:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.008055381990221613
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.005101634747367377
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.12676971280180663
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2070:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.008982459165133634
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0017041356985189812
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2075:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.006514092933378443
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.003609657126233401
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2095:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.013677782823781404
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.008028148637740706
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.08899801713193166
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2122:emotion_amusement",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.011111638290709935
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 4.77002562188078e-05
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2128:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0034118891270740193
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0026831196876040547
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.014722150068152778
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2161:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.030358122074615065
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.01151254089978121
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.03364798953160955
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2178:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.006989128285431863
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0017001762310434668
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.003624273732704325
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2181:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.017978979548100474
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.01712724274146194
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.05149977618566462
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2195:emotion_love",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.0033793741647885067
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.00160633348929895
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2317:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0006340918002774865
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.00037670840840608316
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.0004341111339606456
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2341:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.005929011477772278
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0024023470791444124
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2345:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0015733174965630939
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.015677482222268356
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2437:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.004961309598593845
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0014589845100143675
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2521:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0027232920680871804
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0006017206245523994
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.004236340491202917
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2523:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.00131386116424001
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0026907678174121867
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2563:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0013788525517773945
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.003015715352332589
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.0014872807209998125
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2612:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.06054127397555589
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0373165432879812
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.07534894278647769
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2653:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.02195340460399997
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.002943558048636219
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2748:emotion_neutral",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.007221057399010883
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.006317601623399657
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2756:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0072573083888081286
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0027518353595741146
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2846:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.06249108019020497
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.009483176136590998
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.11757296674170986
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2901:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0032765479012411003
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.008661129896194594
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2916:emotion_approval",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.008272170773977905
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.014857273599494292
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2935:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.02146171545713514
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.018384849851205795
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:2952:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0010671162927941846
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0007098352874391999
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3093:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.23730725049972534
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.003736154180030926
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.1773597791707685
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3122:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.07957378603272525
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0007931752199777931
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3122:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.01549648587591745
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0015220115937054739
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3125:emotion_amusement",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.006139278411865234
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0050244927406311035
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3183:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.008983515994151148
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.008227926009344189
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3187:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0009337141301436497
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3205:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.012283994374224338
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.00399798157809661
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.030488941430577253
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3227:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.007792400458669163
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.01976495892860182
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3233:emotion_realization",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.1219819188117981
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.04199643932216432
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3306:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0035228446522253126
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0008512950863297543
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3328:emotion_amusement",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.03165923168191975
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.005274979513124861
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.15135784526691554
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3349:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0023159493131223747
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0017507400023837189
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3416:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.008784484705732981
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.003978979430006663
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.05252928718070857
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3419:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.004472374782789501
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.037684608017402005
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.018570392770457467
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3437:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0003211334306403302
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.04077348932351943
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.190428381873023
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3489:emotion_sadness",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.1339785077096891
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.00036420602817055503
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.25625305374600316
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3539:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0067883481057528505
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.002647658950788341
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3541:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.012768064497724621
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.005970095257744182
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3557:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.05191326503451446
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.03152358229028773
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3585:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.017625832643746286
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.020338773727416992
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.10790485143661499
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3586:emotion_neutral",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.023201464915231895
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.054392395782697306
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.11031329629924705
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3595:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.008202455058327063
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0039490083646522844
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.027546573337365404
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3612:emotion_amusement",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.00021282541235834174
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.002715757643132033
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.029314076186795823
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3620:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0017627409301845948
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0009404526200545681
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3667:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.008650626687505603
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.009462608015625165
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3718:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0005718361673774271
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0006097662930426677
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3771:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.005696405334242274
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0005160734099389878
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.0037011071606960592
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3798:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0008790110787386691
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.000552493638632523
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3821:emotion_gratitude",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.010631884054473018
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.032168212028276244
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.2186508259042201
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3845:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.002662798861441197
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0015730437216412013
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.05750588588214681
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3849:emotion_realization",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.03478946264508018
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.03131896257400513
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3863:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.02015108993660708
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.00576568816110011
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.16791845491539736
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3906:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0010234896306381257
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0006843988014580814
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3944:emotion_disapproval",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.03319219961236419
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.02321043841683046
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.26560086011886597
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:3953:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0891665928470051
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.02897595834227426
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.014528166543141569
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4002:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.05922749674054118
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.022921433750693
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4009:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.007734379420309523
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.01446457781947319
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.04295698723637398
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4014:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0024686806802225736
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.018137168904839546
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4050:emotion_gratitude",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.0
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.010059449223418393
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4095:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.023964913964608342
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.07081033438408693
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4127:emotion_approval",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.0
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0009113293134580536
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.025487057175236583
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4193:emotion_neutral",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.007339894334084107
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.010854354021433088
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4198:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0013833081996198777
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.00017258075704987275
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4300:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.011292219498521744
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.00247566096220575
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4323:emotion_approval",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.005958368044860385
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0005150068011942066
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4375:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.00032392380123924536
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.03772747629068726
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4443:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0027125714118470014
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.001897146235611439
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4448:emotion_approval",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.06270747692540013
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0036014916659291574
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.18821727631235333
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4474:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.020167604579506407
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.00508382083530147
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.05605545464945079
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4477:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.008853479662043195
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.02089818543902988
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.07077823676657916
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4578:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.026258904548640855
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.012366513026068587
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4584:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.017775217290176643
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0057922194571702335
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4606:emotion_neutral",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.00779744555134633
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.004623042520545115
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.011246774715210961
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4616:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.007888157921479788
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0056612493470939995
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.08765449988476404
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4617:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0022959920764649352
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.001476062972738508
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.0178524696940214
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4617:emotion_neutral",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.004262414744220976
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.004458593841354844
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.004027771908306929
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4625:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.027254249120881598
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4649:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.045324622391239966
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.016280470219504378
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4711:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0010904593099151372
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.002558926003852241
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4777:emotion_disapproval",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.01696449469057537
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.007059022777173407
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4780:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.008749294994376482
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.007951835161601396
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.014411690162129162
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4789:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.04452482398719139
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0033668061666235483
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.0002479208587464754
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4950:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.014832853828881568
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.00023823451725570044
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4962:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.004236296150638363
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0006765945619530145
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:4964:emotion_neutral",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.0025097132477078787
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0014588431375971433
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:5133:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.025594371451825637
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.015108346488823088
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.19575065469230493
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:5141:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.13782612682937823
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.041296258656692064
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:5196:emotion_confusion",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0006320016957488406
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.006101442946626179
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.09729115438044826
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:5204:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0292973096666182
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 8.529424031866739e-05
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.06991929860233248
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:5227:emotion_fear",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.006088691600658266
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0026275131214380625
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:5237:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.004015942243762137
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0073200198838976605
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:5237:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.00202273176727151
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0005664184073843961
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:5262:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.06926265780015163
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.07893195214522797
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:5263:emotion_surprise",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.003594601577420975
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.004431402944795604
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.1752668550868176
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:5274:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0011338675756434637
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0020284021288783614
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.016902373503565136
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:5307:emotion_pride",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.014981777675962898
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0010567577766447123
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:5316:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.004989213775951854
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.001259867013363572
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:5335:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.005758460615103784
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.003488698087793944
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.009414523164661518
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:5380:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.002735842940431915
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.04749434109120512
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.05216691109932303
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:5402:emotion_admiration",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.019964247071974847
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:5404:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0013589616873921906
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0036243074466801445
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/go_emotions:5422:emotion_curiosity",
+   "family": "heldout.emotion.goemotions",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.03897709710016439
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.008848513541061087
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.10556312637445875
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:12:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.022092814024875146
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.02112009535652365
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.030891232623878218
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:101:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.04692718543983664
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.013202061367916212
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.07948042714269093
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:108:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.02429349080522796
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.008504125043886927
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.01868645680232553
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:177:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.08662675454228697
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.022411783731535507
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.05671250275549673
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:186:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.016420227893522956
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.003677736308851592
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.0037215919339180477
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:218:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.02254275069054039
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.023600925340120885
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.015125563494068392
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:258:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.037599593681094
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.007357847834621518
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.01571389431813308
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:298:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.04052015633248757
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.04003613005080846
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.03252188879070424
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:322:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.05367219749447201
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.008268889945751354
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.053883091061931856
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:370:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.022231948963616455
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.020130823084377737
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.00974304334273016
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:374:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.02523921556929379
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.010033253593280441
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.06813677889027164
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:475:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.025924959974615115
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.01591237658131684
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.036751910897371225
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:500:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.026875371590721196
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.005315457795195606
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.0168147097119516
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:509:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.041942820569288726
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.008668549280682461
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.01953322895975134
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:573:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.03535220276926457
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.005484426053961933
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.012930677299327321
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:589:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.04531166531823748
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.02017070366517117
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.00817762131327606
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:606:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.011278770301921337
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0014757537939733261
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.0016650322678167608
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:647:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.010126558780352672
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.004116761062803603
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.015531573873569685
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:661:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.015209791973645007
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0008674199870746186
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.003817148386272992
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:749:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.03686147069200581
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.019819896875695478
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.027645759669848245
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:824:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.01612313224723952
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.004137141026887198
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.023310097312683013
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:826:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.03030799650929658
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.011375993235945847
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.08504525600176277
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:831:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.05388165480998343
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.021526691224631175
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.11611585610061743
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:950:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.024403338725682622
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.009740311886634524
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.0630901671605743
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:960:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.004113177220671123
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.010545465856213625
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.0114633849518785
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:980:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.03043717760541678
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.013002349122966824
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.010195790136069912
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1014:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.03270775274680572
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.005524408596023878
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.00692848991808688
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1019:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.04843604877025845
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.003567097207520707
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.015219845293567048
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1084:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.048559428347531845
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.03585146478215109
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.021291689550853907
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1104:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.04731827767992956
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.010892484208949949
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.03045033662572426
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1198:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.04188460195865982
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.010849427275430673
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.011053125442159764
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1256:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.01948191901027993
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.04000724814847816
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.14235805135525134
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1296:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.02789709407546707
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.004104595236926634
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.07768697097631631
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1311:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.11481778237783902
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.015348228920697619
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.03780897561693685
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1326:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.0222189571013659
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.009323525945116318
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.0285861493432098
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1387:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.03698947513334615
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.009078025547324842
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.017526437257023422
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1396:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.02532439550245724
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.00991019299612057
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.031919346357649245
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1432:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.006209072997776184
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.001490545951723214
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.025093748641879493
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1477:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.04142754052368295
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.013281562872322628
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.03124585740941476
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1515:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.04326016336806538
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.014640881436310087
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.009816261888768912
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1544:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.05091296848986781
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.01584013515679074
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.02277001464047907
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1575:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.02343169790392146
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.0005891201525177782
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.017696077689081664
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1594:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.09831336583959782
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.007266975939273834
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.09882298796319355
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1633:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.09801525410343566
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.023313534674170328
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.09642631570583167
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1666:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.023335921216349975
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.003446152305650152
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.036083571421756944
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1725:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.050225903834943825
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.0023445476456864303
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.03213771276074957
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1792:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.015173458342014955
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.029402179410322825
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.04333982609242777
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1809:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.08344501212634589
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.07534781513343282
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.037514019066494625
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1827:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.03522783776552148
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.030348113061949414
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.03166416642738257
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1961:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.027691501524849255
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.04365701735930612
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.012438597660572842
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:1967:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.050814191049232
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.015735141552362834
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.026346804631640908
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2053:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.08141635150643053
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.009024170820292478
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.08811903196839314
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2055:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.1822078137292186
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.06673098621991583
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.09020629033547699
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2129:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.03915337970267496
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.012237235169210936
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.015602455004774987
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2131:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.02152936822372483
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.006421454845784824
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.014904982694779405
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2300:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.05454003221221932
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.02045824315011375
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.009956529517956565
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2358:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.020421268662990245
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.016044471739718714
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.01148246686182017
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2466:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.07620210138232308
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0542799742156712
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.03414933051247292
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2541:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.009719455556008083
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.008887226757259123
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.018154614273277324
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2551:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.033137431749518304
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.003177741487540464
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.009253753162623696
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2724:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.06113493881923218
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.013630119505764454
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.0393281230650815
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2739:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.007283377779550924
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.008803930496960257
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.019356569801488546
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2751:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.025205537614358522
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.002958718976476052
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.011157840258601892
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2804:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0543487721141333
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.00996864499976496
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.033172067194818286
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2869:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.0406165768364349
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.01787352742001468
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.12666801906083958
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2885:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.017345665650839302
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.013353616318506508
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.0017045131941973444
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2925:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.0200206263127256
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.0065713019714323945
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.13438140207153387
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2937:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.06572652849022019
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.012261799753687214
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.041157205716139414
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:2942:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.047389512832211766
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.06124238762277167
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.02364084576987677
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3032:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.03188403088194279
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.0027154220286416918
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.04197491802297065
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3101:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.10965147499232814
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.010413532720767726
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.023097273432041973
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3178:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.039384184404961844
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.012151031323627846
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.03481664011409788
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3183:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.19633664500845066
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.06670023566020056
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.06715315397667503
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3204:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.030951105355672647
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.014029070843821614
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.009262493570676895
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3205:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.0034124274458911634
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.006022298172810209
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.07284595366872636
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3295:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.06583563067066135
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.04105093645920121
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.02206111226792462
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3357:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.015501507029247366
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.026604599689839865
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.040868585855023475
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3394:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.027839378866925148
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.0038646458427713526
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.039171385738178674
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3426:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.0488552532796694
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.008758166468773993
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.028091672419674942
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3486:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.16241238221093737
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.030303970772246884
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.09892283596093644
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3490:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.031520028871694666
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.00558631701916186
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.08336951541940353
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3572:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.012312731804570935
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.011717537498899339
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.023337582916017754
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3623:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.01021533840328243
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.05617393297193664
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.011988433349601653
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3671:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.03171981854094408
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.009042042718629541
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.03623893726789766
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3751:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.02052877024676722
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.014890060125460208
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.012221657461980479
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3826:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.034517255247978954
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.027649024095817085
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.011376206397317665
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3852:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.02133318707139502
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.00242634816781441
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.005154964018251086
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:validation:3863:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.12267320997580299
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.017291262241581295
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.025486850618870373
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:25:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.02830969539146073
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.0067128811133858775
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.05418925407696287
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:47:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.023878952858322935
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.02978128982270621
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.06255752781397225
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:225:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.04218332862414377
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.004162887188427888
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.009735136546306311
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:266:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.020496358272016735
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.004026928333147245
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.027225636094583838
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:437:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.021523863077163696
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.006311767833770188
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.025015010670576904
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:476:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.011945175022976623
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.008176133864748455
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.03864407539367676
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:558:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.06732242974549604
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.009742243347454473
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.08128745656615463
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:559:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.019493004883322992
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.005161801696827242
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.01680794724040502
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:692:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.0368273780631707
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.00881733876301255
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.026873263903440775
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:748:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.019368547170489116
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.03414505413748781
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.08273881037972265
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:754:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.046144961201669034
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.008702957203487773
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.09903203762099973
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:762:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.0473847486321253
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.008295857885789563
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.018701628129208503
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:767:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.011958644150455139
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.002028652098158834
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.034495531160778636
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:801:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.035778470361282774
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.014828099598679562
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.02179842123951628
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:818:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.04138241708278656
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.008026759046304482
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.013751365972180116
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:935:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.03580245168906694
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.009626477669880451
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.02478444267488164
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:970:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.05435827886225058
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.020719919715099004
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.03331052648842956
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:986:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.10267286790579666
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.04917851470050312
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.010987125829753648
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:988:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.05590327175801154
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.0023237269813180285
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.02107984191639866
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1032:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.0335546709288653
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.009898650503037489
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.02108369670208126
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1060:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.020296503718369642
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.03751028548297312
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.0074111586362648856
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1067:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.015784751908484176
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.0018510963041947527
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.04358926194492504
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1098:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.029284889110986277
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.003282657523298864
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.049520334105632176
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1183:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.035585840093544624
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.0057326732115840565
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.040750801374192486
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1187:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.09192213962628573
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0222918142533837
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.028713666652034668
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1291:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.08096633738814912
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.012223854821913637
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.00783792798961299
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1295:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.04168466661684959
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.030510487700714274
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.050701500761559215
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1301:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.0346499066572889
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.011146012381696768
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.019010549635323476
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1321:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.0493211283408328
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.019632880260045362
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.03011295955091553
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1399:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.060892638316183745
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.017049681668301148
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.15334551931332527
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1416:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.024727214460026986
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.007806411889763054
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.031088569870462046
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1431:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.022015963254032503
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.016898504885220003
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.05483269895149692
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1487:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.02971517171084908
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.01342265551138986
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.04713761110681186
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1552:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.053963765817469915
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.008021780931143684
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.01977995713972082
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1610:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.09179751605787648
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.003574478208474792
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.02346276773944308
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1616:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.05875447188882377
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.020785060952768216
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.010832760477720756
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1619:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.11053923401829313
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.0363049044204367
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.1619018050453069
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1639:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.013011582894952217
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.03744101328435284
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.031135263386009797
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1665:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.06698859829890269
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.010176336962913188
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.028750865354397304
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1675:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.033527312135338536
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.009139546930305602
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.06918611582094417
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1681:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.014840076015378938
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.010163949926164689
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.04181232685820614
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1759:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.02763376040585603
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.09124147882874499
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.04273372074734989
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1815:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.009422184354275737
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.016047657002703487
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.008948262459174208
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1822:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.05168597543221084
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.018069703824174166
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.023400263460781265
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1828:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.03707549055878788
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.013404608284296352
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.0024069540289628037
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1849:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0202499768916386
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.008428196565779193
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.012748653868122226
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1919:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.03255371992907438
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.034294383848256296
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.021020515189437525
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1962:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.030952124545291275
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.015309736161138371
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.03015567222028808
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:1982:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.02373447238923801
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.005617646071211617
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.015319778776311098
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2056:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.11732072783568702
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.003210727490689229
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.009842043817467894
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2093:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.023679354909031593
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.01391224552756365
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.05289966694281442
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2154:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.011231298239105866
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.008566648077341164
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.029333153945633725
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2174:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.05740404875702249
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.029931999418563986
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.006515369840928618
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2231:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.04480931822173949
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.03410717162736404
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.01652012341136093
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2343:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.002991233517698786
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.019885501260954567
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.00900520709102881
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2386:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.007641474469381087
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.001138832727069796
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.0035862944952577648
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2515:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.025855172176546898
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0370747594530303
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.0026243354686163387
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2560:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.030701389316462865
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.0099276089140924
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.15525205910286388
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2659:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.029845010432930853
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.06732469242953375
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.07521013836571543
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2783:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.033032111862984354
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.04731128297685579
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.005920287407326521
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2793:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.012563749927500263
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.004736567673059296
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.011176698284040894
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2890:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.02873681437312251
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.02295768914121759
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.03726768766582888
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2900:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.0657714206747678
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.06594564027373759
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.01177433461347389
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2930:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.05006900243204079
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.020053702882738354
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.08828559188970952
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2947:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.015175147940209618
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.001592714867964154
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.0324116127257769
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2962:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.02092844003687086
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.006611464720390613
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.045165133066126475
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:2967:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.04398058820184293
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.009416900927157693
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.017639756886733048
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:3025:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0649196070550203
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.01493397416077926
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.01136025472594445
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:3094:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.013514488380940631
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.00958530985727099
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.06116014660915909
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:3106:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.02469649511917095
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.015055633829952883
+    },
+    "sentence_swap": {
+     "argmax": 0,
+     "tv": 0.015108159132350404
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:3240:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.030956754070720384
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.007678551437876359
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.005782689091785108
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:3264:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.045229192174789254
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.023535251291559825
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.03671102882703353
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:3266:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.12859834228586725
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.021394335129172548
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.029151578104961953
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:3271:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.05627367455986651
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.04105211527821484
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.029569403185131994
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:3406:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 3,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.012879692647460562
+    },
+    "punctuation": {
+     "argmax": 3,
+     "tv": 0.006939413380874844
+    },
+    "sentence_swap": {
+     "argmax": 3,
+     "tv": 0.018765113894333926
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:3473:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.04136131181833928
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.004563592351254295
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.04699877484237474
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:3491:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 3,
+     "tv": 0.035425042015294464
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.01047956022897345
+    },
+    "sentence_swap": {
+     "argmax": 4,
+     "tv": 0.0567956544601472
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:3508:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.01795256728073676
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.013032128807966604
+    },
+    "sentence_swap": {
+     "argmax": 1,
+     "tv": 0.0057063996743279555
+    }
+   }
+  },
+  {
+   "id": "coastalcph/lex_glue:test:3554:holding",
+   "family": "heldout.legal.casehold",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.056155127474958336
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.014135754074991132
+    },
+    "sentence_swap": {
+     "argmax": 2,
+     "tv": 0.03110176833132647
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:2:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.059316087989190996
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.006823419837746135
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:92:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.02193951796280054
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.047143125734219034
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:128:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.04272604112391175
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.005062878751618177
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:332:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.00734259324960871
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.002852860587088314
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:533:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.04612094980697054
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.016904515043113407
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:549:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.025745816330062794
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.011485475089693338
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:687:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.11107301284282181
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.020809363866883698
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:805:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.11764763694526689
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.013594786770344338
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:1312:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.028147598184285232
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.007349596182207593
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:1423:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.03441973335963681
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.012537892781242312
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:1482:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0028878545277484674
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.003136134664603703
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:1503:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.00986035003983916
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.005829116478249595
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:1534:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.028692546493766964
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.014422763590184923
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:1546:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.05089414610667174
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.033983737902236466
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:1718:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.006363743053357683
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.005291924923516832
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:1774:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.009260467338149222
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0076527377757882094
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:1834:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.0073327014778078094
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.007209658307830375
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:2338:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.02006719452154623
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.014849946634408627
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:2586:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 5,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 5,
+     "tv": 0.07123097200713713
+    },
+    "punctuation": {
+     "argmax": 5,
+     "tv": 0.037346604784188775
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:2953:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.07994565033166617
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0025917728581212503
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:3027:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.03043527470900429
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.002511021344953209
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:3393:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.013862760779860334
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.007006382661336685
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:3537:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.01773702212642004
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.02640538882440476
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:3622:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.007939471735288937
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.004913078026210685
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:4156:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.007730372666706642
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.010591265877923285
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:4163:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 5,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 5,
+     "tv": 0.04542986186563103
+    },
+    "punctuation": {
+     "argmax": 5,
+     "tv": 0.006280725145585962
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:4187:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.03082938106529827
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.03375658753032361
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:4300:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.08766287725287761
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.005408937276452604
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:4686:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.029820572306321413
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.02133123482575897
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:4716:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.0038356243565281787
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.006899322800407165
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:4819:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.002930076083351807
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.004182576412528376
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:4995:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.030134522904219994
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.017827881949252396
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:5399:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.05457839627299395
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.00715468737970021
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:5461:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.003411609368088842
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.005888768786405525
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:5585:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.020012200649587593
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.005212120527641749
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:5709:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.00061680006378614
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0010055525183493
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:5925:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.008529285791046615
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0012989497850652825
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:6001:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 6,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.19069096044587325
+    },
+    "punctuation": {
+     "argmax": 6,
+     "tv": 0.02234327704350628
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:6473:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.023254655428758004
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.012455817607485353
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:6522:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.0454876980377256
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.02151408978043363
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:6621:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.025467052864782656
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.005738419525584114
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:6837:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.06948224271648697
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0011352783507322583
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:6928:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.0531235859511697
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.030796378357727028
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:7226:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.09464084419431304
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.0277714530459048
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:7489:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.013027229331082673
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.007060440027978706
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:7560:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 5,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 5,
+     "tv": 0.08863686846268601
+    },
+    "punctuation": {
+     "argmax": 5,
+     "tv": 0.009154841316738504
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:7763:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.004367946768059169
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.002093081333890854
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:8692:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 5,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 5,
+     "tv": 0.010070070546139561
+    },
+    "punctuation": {
+     "argmax": 5,
+     "tv": 0.011684005706443353
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:9293:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.03644087971712001
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.01015602438260534
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:9387:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.10209614074999863
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.01043822163891331
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:9403:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.007679130900267258
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0015332100033251088
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:9759:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.029897189989762884
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.018777838364325932
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:9818:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.022605532926721725
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.03739098792949798
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:9931:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 6,
+     "tv": 0.03189651772181428
+    },
+    "punctuation": {
+     "argmax": 6,
+     "tv": 0.011019818568570778
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:10061:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.06313626315901609
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.013334921147383057
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:10117:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0023772289822739994
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.005043454141263089
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:10462:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.006968899219585226
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.011527469164237556
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:10515:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.027290156929488957
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.005365783767568993
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:10596:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.013128002181575015
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.003887700992243343
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:10908:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.004560651594967218
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.000896444192803381
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:11103:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.059874177040179236
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.012921884553885103
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:11250:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.06334405042877089
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.011213841027485268
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:11346:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.05026415962409336
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.001769308520653462
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:11402:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.03833495632000195
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.010522486112476276
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:11742:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.053213177148837214
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.01832789829817693
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:12012:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.04778308238108783
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.017388199561846073
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:12158:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.04680896239627555
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.011543771238432539
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:12184:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.08336542908476233
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.02234527727182692
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:12500:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.005204855386038506
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.003080977088443462
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:13001:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 6,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 6,
+     "tv": 0.05674112562407416
+    },
+    "punctuation": {
+     "argmax": 6,
+     "tv": 0.018681312620085253
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:13217:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 6,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 6,
+     "tv": 0.178794509199332
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.015927154541876126
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:13227:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0043835806680460054
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.00425645932497489
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:13416:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.002832060239587362
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0034932846934295344
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:13525:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.010042849523417382
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.016452140421401307
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:14220:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 7,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 7,
+     "tv": 0.012007979321406903
+    },
+    "punctuation": {
+     "argmax": 7,
+     "tv": 0.02658443638964033
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:14283:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.01838602230375928
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.006348411289271175
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:14461:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.013842502091716133
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.009917330441771968
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:14945:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.010848789179056842
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.002404842725639205
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:15031:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.011554267235777203
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.012818473903247097
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:15667:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.014076643264306868
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.009662415490322054
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:16019:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.004203684535598461
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.0015144463576086268
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:16059:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.09263969426812185
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.022128794284927235
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:16304:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.09818073558473868
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.05843342372646989
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:16511:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.017509364967634947
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.022480736051917624
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:16798:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.008575634435433523
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.008043132491084565
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:17106:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.07308581193662904
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0097795052979699
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:17199:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 6,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 6,
+     "tv": 0.06877719217796727
+    },
+    "punctuation": {
+     "argmax": 6,
+     "tv": 0.004832951826219295
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:17521:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.018046887201276007
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.014425248452909809
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:17777:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.08465304085561323
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.013127552886028238
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:17780:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0029230347154503714
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.010121624249556309
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:18703:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.01856238226969037
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.010734864159374628
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:18780:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 6,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 6,
+     "tv": 0.04332122624613713
+    },
+    "punctuation": {
+     "argmax": 6,
+     "tv": 0.010311511692180846
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:18946:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.0030624709315617725
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.0005654151616496434
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:18975:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.06663886046800872
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.014731445659549883
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:19319:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.0026004565561006322
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.001809899595154318
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:19687:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.009382695281137887
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.0018630624412077092
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:19690:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.029767602098002967
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0060506302522626235
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:20032:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.008467763850862044
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.018572339031325
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:20139:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.0019193399177129926
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.00025486048486256306
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:20347:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.01158327655092551
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.005578565107738251
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:20899:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.21879782259520472
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.019733610177803076
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:21028:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0059867053643436665
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0012541586383729992
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:21623:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.005662519502502367
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.00888372743285583
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:21744:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.09701045769578218
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.025719098968201994
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:21772:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0667460729512312
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.011408663628149001
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:21904:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.00491695201845452
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.0030465281976859125
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:22195:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.1071891454027375
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.011536046935836358
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:22446:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.019914481731820408
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.012122217310036154
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:22635:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 6,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 6,
+     "tv": 0.0837786843167093
+    },
+    "punctuation": {
+     "argmax": 6,
+     "tv": 0.031422967298378804
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:22880:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.03923822664128311
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.01458020592720407
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:23019:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.13393728796851903
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.018849622538577623
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:23047:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.049453830668325274
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.012113874024687613
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:23203:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.014439953938083245
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.002863174521456003
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:23257:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.002830315723770592
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.0039851162057399645
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:23361:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.008842955710090914
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.002829582060428264
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:23425:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.021538272124078564
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.009703630651229155
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:23662:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.05282798564396468
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.005841777957961082
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:24139:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.04588719488935201
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.0036661044132616145
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:24235:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 5,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 5,
+     "tv": 0.026895554902404063
+    },
+    "punctuation": {
+     "argmax": 5,
+     "tv": 0.012785518904578491
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:24319:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 5,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 5,
+     "tv": 0.07546443455444833
+    },
+    "punctuation": {
+     "argmax": 5,
+     "tv": 0.023750660352299346
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:24583:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.03377190587945451
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.005605836721497951
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:25022:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.03555847314076219
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.008319010488769001
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:25028:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.04871325473774358
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.011242456616656448
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:25287:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.03010315621444703
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.007056566426530502
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:25408:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.0253393037345441
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.017912452664671355
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:25581:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 5,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 5,
+     "tv": 0.018258196639452114
+    },
+    "punctuation": {
+     "argmax": 5,
+     "tv": 0.013732434457460614
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:25621:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 6,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 6,
+     "tv": 0.005977908693515218
+    },
+    "punctuation": {
+     "argmax": 6,
+     "tv": 0.0005378292556952129
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:25864:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.03817547307662965
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.03586938328190205
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:25980:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 5,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 5,
+     "tv": 0.0014770505047334195
+    },
+    "punctuation": {
+     "argmax": 5,
+     "tv": 0.0006642873082923712
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:26045:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 5,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 5,
+     "tv": 0.013457040750864582
+    },
+    "punctuation": {
+     "argmax": 5,
+     "tv": 0.001989149728250629
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:26735:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 5,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 5,
+     "tv": 0.004543902573021862
+    },
+    "punctuation": {
+     "argmax": 5,
+     "tv": 0.010469389621715165
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:26936:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.0011522901763472305
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.00729490070995065
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:26965:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.05015133362861393
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0075676218604546226
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:27548:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 5,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 5,
+     "tv": 0.018421191666816703
+    },
+    "punctuation": {
+     "argmax": 5,
+     "tv": 0.0026023668822865416
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:27808:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.023350433773114406
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.021731063334384362
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:28180:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.04753385272076365
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.002687966486450309
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:28280:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.024654005458382804
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.011672903995305055
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:28540:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.009524918772840538
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0018434411113247232
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:28854:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.015209847423625774
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.005605141366837714
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:28972:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 6,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 6,
+     "tv": 0.13361829312770615
+    },
+    "punctuation": {
+     "argmax": 6,
+     "tv": 0.03218264574063319
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:29142:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.029131029236559632
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.01175859150040006
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:29333:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.04017496453488292
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.005136559688386893
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:29334:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.03818098627747224
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.003494398725040231
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:29862:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.028308134902644364
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.03820821177066512
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:29871:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.011204532295448513
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.011826886818787229
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:30177:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.0325992830843049
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.011310322181942046
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:30286:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 5,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 5,
+     "tv": 0.028930333861563594
+    },
+    "punctuation": {
+     "argmax": 5,
+     "tv": 0.001389223534809701
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:30350:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.032266033665140456
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.016214067839340682
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:30440:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.013665973879254922
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.006941156552225438
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:30547:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.005589300063399413
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0027587618217358367
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:30695:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.011510231841689506
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.003728448087468507
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:31042:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.04141698567620389
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.0055064833352854396
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:31060:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.05222770293631539
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.008284255258084856
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:31119:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.04251073652980058
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.022442652764151957
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:31166:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.03269052441788661
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.017684767571127753
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:31469:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.02741560668632797
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.013192498239205227
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:31509:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.022186870414642946
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.008592518957886534
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:32138:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.05782573840251205
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.004826913897879355
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:32329:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 6,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 6,
+     "tv": 0.05878521137086003
+    },
+    "punctuation": {
+     "argmax": 6,
+     "tv": 0.006473246101662585
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:32396:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 1,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.013842343474957785
+    },
+    "punctuation": {
+     "argmax": 1,
+     "tv": 0.005944992917420319
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:32537:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 0,
+     "tv": 0.026379393767578595
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.00214276895663465
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:32852:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 0,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.400100036435995
+    },
+    "punctuation": {
+     "argmax": 0,
+     "tv": 0.008260069403609602
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:33243:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 1,
+     "tv": 0.04322153744886898
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.01944741327174733
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:33411:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.0055436939636852745
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.004378484762706483
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:33706:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 4,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 4,
+     "tv": 0.02220831457979943
+    },
+    "punctuation": {
+     "argmax": 4,
+     "tv": 0.024778943400109762
+    }
+   }
+  },
+  {
+   "id": "google-research-datasets/circa:33813:meaning",
+   "family": "heldout.pragmatics.circa",
+   "orig_argmax": 2,
+   "perturbations": {
+    "case_whitespace": {
+     "argmax": 2,
+     "tv": 0.06676820726586805
+    },
+    "punctuation": {
+     "argmax": 2,
+     "tv": 0.023165895803277544
+    }
+   }
+  }
+ ]
+}

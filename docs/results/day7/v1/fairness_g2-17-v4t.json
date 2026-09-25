@@ -1,0 +1,358 @@
+{
+ "lexicon": {
+  "gender": [
+   "woman",
+   "women",
+   "man",
+   "men",
+   "female",
+   "male",
+   "girl",
+   "girls",
+   "boy",
+   "boys",
+   "wife",
+   "husband",
+   "mother",
+   "father",
+   "transgender",
+   "trans",
+   "nonbinary",
+   "non-binary"
+  ],
+  "sexual orientation": [
+   "gay",
+   "gays",
+   "lesbian",
+   "lesbians",
+   "bisexual",
+   "homosexual",
+   "homosexuals",
+   "queer",
+   "lgbt",
+   "lgbtq",
+   "heterosexual",
+   "straight"
+  ],
+  "religion": [
+   "christian",
+   "christians",
+   "catholic",
+   "catholics",
+   "protestant",
+   "jew",
+   "jews",
+   "jewish",
+   "muslim",
+   "muslims",
+   "islam",
+   "islamic",
+   "hindu",
+   "hindus",
+   "buddhist",
+   "buddhists",
+   "atheist",
+   "atheists",
+   "sikh",
+   "mormon",
+   "evangelical"
+  ],
+  "race / ethnicity": [
+   "black",
+   "blacks",
+   "white",
+   "whites",
+   "asian",
+   "asians",
+   "latino",
+   "latina",
+   "latinos",
+   "hispanic",
+   "hispanics",
+   "african",
+   "africans",
+   "arab",
+   "arabs",
+   "mexican",
+   "mexicans",
+   "chinese",
+   "indian",
+   "indians",
+   "native american",
+   "indigenous"
+  ],
+  "disability": [
+   "disabled",
+   "disability",
+   "disabilities",
+   "wheelchair",
+   "blind",
+   "deaf",
+   "autistic",
+   "autism",
+   "mentally ill",
+   "mental illness",
+   "schizophrenic",
+   "bipolar",
+   "retarded",
+   "handicapped"
+  ]
+ },
+ "calibration_metric": "smece",
+ "seed": 0,
+ "min_group": 200,
+ "runs": {
+  "g2-17-v4t": {
+   "moderation.civil_comments": {
+    "groups": {
+     "identity": {
+      "n": 1280,
+      "accuracy": 0.97265625,
+      "xent": 0.20191945842935688,
+      "smece": 0.043034033548236685,
+      "false_toxic_rate": 0.0016474464579901153,
+      "n_gold_not_toxic": 1214,
+      "missed_toxic_rate": 0.7727272727272727,
+      "n_gold_toxic": 66
+     },
+     "none": {
+      "n": 8675,
+      "accuracy": 0.9895100864553315,
+      "xent": 0.09567825885627056,
+      "smece": 0.01929154817210439,
+      "false_toxic_rate": 0.0014114326040931546,
+      "n_gold_not_toxic": 8502,
+      "missed_toxic_rate": 0.6705202312138728,
+      "n_gold_toxic": 173
+     }
+    },
+    "identity_category_counts_by_comment": {
+     "gender": 143,
+     "religion": 28,
+     "sexual orientation": 32,
+     "race / ethnicity": 80,
+     "disability": 20
+    },
+    "too_small": [],
+    "gaps_identity_minus_none": {
+     "correct": {
+      "gap": -0.01685383645533145,
+      "ci95": [
+       -0.026139229106628248,
+       -0.007798349693804108
+      ]
+     },
+     "xent": {
+      "gap": 0.10624119957308632,
+      "ci95": [
+       0.08891429526560259,
+       0.12377153327592301
+      ]
+     },
+     "false_toxic": {
+      "gap": 0.0002360138538969607,
+      "ci95": [
+       -0.0018794894861981874,
+       0.0028542070658558656
+      ]
+     },
+     "missed_toxic": {
+      "gap": 0.10220704151339988,
+      "ci95": [
+       -0.02472730926802419,
+       0.21695529737309327
+      ]
+     }
+    }
+   },
+   "moderation.score.civil_toxicity_level": {
+    "groups": {
+     "identity": {
+      "n": 264,
+      "accuracy": 0.6439393939393939,
+      "xent": 0.8391512961377561,
+      "smece": 0.07172508867087397,
+      "false_toxic_rate": 0.0,
+      "n_gold_not_toxic": 212,
+      "missed_toxic_rate": 0.7058823529411765,
+      "n_gold_toxic": 17
+     },
+     "none": {
+      "n": 1748,
+      "accuracy": 0.7951945080091534,
+      "xent": 0.4962527393108598,
+      "smece": 0.029608339782664084,
+      "false_toxic_rate": 0.0,
+      "n_gold_not_toxic": 1617,
+      "missed_toxic_rate": 0.36585365853658536,
+      "n_gold_toxic": 41
+     }
+    },
+    "identity_category_counts_by_comment": {
+     "gender": 146,
+     "religion": 32,
+     "sexual orientation": 35,
+     "race / ethnicity": 81,
+     "disability": 20
+    },
+    "too_small": [],
+    "gaps_identity_minus_none": {
+     "correct": {
+      "gap": -0.15125511406975944,
+      "ci95": [
+       -0.21366973510852225,
+       -0.09350209763539276
+      ]
+     },
+     "xent": {
+      "gap": 0.3428985568268963,
+      "ci95": [
+       0.24113065892737273,
+       0.45801206112521375
+      ]
+     },
+     "false_toxic": {
+      "gap": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ]
+     },
+     "missed_toxic": {
+      "gap": 0.34002869440459116,
+      "ci95": [
+       0.07386234448734445,
+       0.5935084033613445
+      ]
+     }
+    }
+   }
+  },
+  "h200-17-fullk-v3d": {
+   "moderation.civil_comments": {
+    "groups": {
+     "identity": {
+      "n": 1280,
+      "accuracy": 0.97265625,
+      "xent": 0.2007842204902583,
+      "smece": 0.048302740844912345,
+      "false_toxic_rate": 0.007413509060955519,
+      "n_gold_not_toxic": 1214,
+      "missed_toxic_rate": 0.6666666666666666,
+      "n_gold_toxic": 66
+     },
+     "none": {
+      "n": 8675,
+      "accuracy": 0.9898559077809799,
+      "xent": 0.09471752947221,
+      "smece": 0.02220702507150882,
+      "false_toxic_rate": 0.0029404845918607385,
+      "n_gold_not_toxic": 8502,
+      "missed_toxic_rate": 0.5549132947976878,
+      "n_gold_toxic": 173
+     }
+    },
+    "identity_category_counts_by_comment": {
+     "gender": 143,
+     "religion": 28,
+     "sexual orientation": 32,
+     "race / ethnicity": 80,
+     "disability": 20
+    },
+    "too_small": [],
+    "gaps_identity_minus_none": {
+     "correct": {
+      "gap": -0.01719965778097987,
+      "ci95": [
+       -0.026536698487031718,
+       -0.008487752161383375
+      ]
+     },
+     "xent": {
+      "gap": 0.10606669101804829,
+      "ci95": [
+       0.0891527216325852,
+       0.12289108288772772
+      ]
+     },
+     "false_toxic": {
+      "gap": 0.00447302446909478,
+      "ci95": [
+       -0.00010616131068455998,
+       0.00975125940344408
+      ]
+     },
+     "missed_toxic": {
+      "gap": 0.11175337186897882,
+      "ci95": [
+       -0.025039440048542663,
+       0.2537053159776913
+      ]
+     }
+    }
+   },
+   "moderation.score.civil_toxicity_level": {
+    "groups": {
+     "identity": {
+      "n": 264,
+      "accuracy": 0.625,
+      "xent": 0.8029193410552136,
+      "smece": 0.06366174642251618,
+      "false_toxic_rate": 0.0047169811320754715,
+      "n_gold_not_toxic": 212,
+      "missed_toxic_rate": 0.6470588235294118,
+      "n_gold_toxic": 17
+     },
+     "none": {
+      "n": 1748,
+      "accuracy": 0.7934782608695652,
+      "xent": 0.4939912270079197,
+      "smece": 0.04127144527307276,
+      "false_toxic_rate": 0.0012368583797155227,
+      "n_gold_not_toxic": 1617,
+      "missed_toxic_rate": 0.34146341463414637,
+      "n_gold_toxic": 41
+     }
+    },
+    "identity_category_counts_by_comment": {
+     "gender": 146,
+     "religion": 32,
+     "sexual orientation": 35,
+     "race / ethnicity": 81,
+     "disability": 20
+    },
+    "too_small": [],
+    "gaps_identity_minus_none": {
+     "correct": {
+      "gap": -0.1684782608695652,
+      "ci95": [
+       -0.23072992510921575,
+       -0.1108535295749255
+      ]
+     },
+     "xent": {
+      "gap": 0.30892811404729387,
+      "ci95": [
+       0.21083161572856754,
+       0.42289967566330383
+      ]
+     },
+     "false_toxic": {
+      "gap": 0.003480122752359949,
+      "ci95": [
+       -0.0024813895781637717,
+       0.013825206500862207
+      ]
+     },
+     "missed_toxic": {
+      "gap": 0.30559540889526543,
+      "ci95": [
+       0.05558295088370274,
+       0.5646636432350718
+      ]
+     }
+    }
+   }
+  }
+ }
+}

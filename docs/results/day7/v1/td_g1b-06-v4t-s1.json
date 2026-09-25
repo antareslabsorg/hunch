@@ -1,0 +1,41 @@
+{
+ "dataset": "LocalLLaMA/typed-decisions",
+ "revision": "c76749ec58bd",
+ "split": "all/test",
+ "checkpoint": "<scratch>/runs/g1b-06-v4t-s1/best",
+ "model": "Qwen/Qwen3-0.6B",
+ "temperature": 1.0,
+ "kind": "general, zero-shot",
+ "n_cases": 400,
+ "n_decisions": 2000,
+ "skipped": [],
+ "overall": {
+  "n": 2000,
+  "accuracy": 0.4935,
+  "kl": 0.4266544703836827,
+  "brier": 0.2333369787125213
+ },
+ "by_type": {
+  "choice": {
+   "n": 600,
+   "accuracy": 0.43333333333333335,
+   "kl": 0.6049064962699989,
+   "brier": 0.28977094106378776
+  },
+  "noul": {
+   "n": 600,
+   "accuracy": 0.6033333333333334,
+   "kl": 0.2889690065088329,
+   "brier": 0.23693344686449067
+  },
+  "score": {
+   "n": 800,
+   "accuracy": 0.45625,
+   "kl": 0.396229548875083,
+   "brier": 0.1883141558350944
+  }
+ },
+ "latency_ms_p50_per_decision": 39.33906555175781,
+ "seconds": 83.45081233978271,
+ "teacher_self_agreement_reference": 0.735
+}

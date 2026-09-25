@@ -1,0 +1,14 @@
+{
+ "dataset": "pngwn/typed-decisions-v2-system-one",
+ "revision": "4af44cdb3cb6e7a4374ef6a2e86bbc656e93d29e",
+ "split": "test",
+ "n": 5214,
+ "overall": {
+  "n": 5214,
+  "accuracy": 0.5297276563099348
+ },
+ "seconds": 742.098534822464,
+ "model": "Mapika/decider-2b",
+ "model_revision": "9839cc9d908be16c5988c0d041034b5fdf82c7a2",
+ "kind": "general, zero-shot (open Decider, own interface, shipped temperature)"
+}
